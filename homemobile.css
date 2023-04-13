@@ -1,0 +1,235 @@
+* {box-sizing: border-box;}
+
+@media only screen and (max-device-width: 720px) {
+	#navid {display: none;}
+	#links-container {display: none;}
+	#links {display: none;}
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}}
+
+@font-face {font-family: Pretendo;
+			src: url(fonts/Pretendo.woff) format("woff");}
+
+body {/**background-color: #FD8B8B;**/
+		background-image: url(images/RZR_Space_3840x2160.png);
+		background-position-x: center;
+		background-position-y: bottom;
+		background-repeat: repeat;
+		margin-left: 25px;
+		margin-right: 25px;
+		font-family: Verdana, Arial, sans-serif;}
+
+sup {vertical-align: super;
+	font-size: 10px;}
+
+#Homelogo {position: absolute;
+		display: contents;}
+
+#links-container {position: absolute;
+				display: flex;
+				top: 95px;
+				right: 60px;}
+
+#links {/**position: absolute; /** Easier to use then the Twitter and Youtube ids. **/
+		/**display: flex;
+		top: 110px;
+		right: 140px;**/
+		background-color: black;
+		background: #0000003b;
+		padding: 5px;}
+
+.centered {/**display: flex;
+		justify-content: center;
+		align-items: center;**/
+		height: 25px;}
+
+.arrow {border: solid #0000FF;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		margin-bottom: 3px;}
+
+.up {transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);}
+
+.down {transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);}
+
+.left {transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		-o-transform: rotate(135deg);}
+
+.right {transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);}
+
+.down:hover {border-right: solid #FFFFFF;
+			border-bottom: solid #FFFFFF;}
+
+#HomePhoto {box-shadow: 5px 5px 10px #1E1E1E;
+			border: 5px solid #FFFFFF;
+			display: none;}
+
+.aligncontentcenter {display: flex;
+					justify-content: center;}
+
+.imageonbottom {opacity: 1;
+				transition: 0.5s ease-in-out;
+				-webkit-transition: 0.5s ease-in-out;
+				-moz-transition: 0.5s ease-in-out;
+				-o-transition: 0.5s ease-in-out;}
+
+.imageontop {position: absolute;
+			opacity: 0;
+			transition: 0.5s ease-in-out;
+			-webkit-transition: 0.5s ease-in-out;
+			-moz-transition: 0.5s ease-in-out;
+			-o-transition: 0.5s ease-in-out;
+			display: flex;
+			justify-content: center;}
+			
+.imageontop:hover {opacity: 1;}
+
+.imageontop:hover ~ .imageonbottom {opacity: 0;}
+
+#textcolor {color: #FF0000;
+			text-align: center;
+			font-size: 115%;
+			font-weight: bold;
+			margin: 15px 10px 5px 10px;}
+
+.important1 {font-weight: bold;
+				font-style: italic;
+				color: #FF0000;}
+
+header {background-color: #F5F5F5;
+		background-origin: content-box;
+		color: #FF0000;
+		letter-spacing: 0.1em;
+		font-family: Pretendo, Verdana, sans-serif;
+		font-size: 150%;
+		text-align: center;
+		text-shadow: 2px 2px 2px #000000;
+		padding: 10px 10px 10px 10px;
+		background-repeat: no-repeat;
+		/**background-image: url(images/YouTubelogosmaller.jpg);**/
+		margin-top: 25px;
+		margin-bottom: 0px;}
+
+h2 {color: #FF0000; /**#B3C7E6**/
+	font-family: Arial, sans-serif;
+	margin: 1px auto 10px auto;}
+
+h3 {color: #0000FF;
+	font-style: bold;
+	font-size: 100%;
+	padding: 0px;
+	margin: 1px auto 1px auto;}
+
+h4 {color: #0000FF;
+	font-style: bold;
+	font-size: 100%;
+	padding-top: 20px;
+	margin: 1px auto 1px auto;}
+
+.horizontal_line {background-color: #FFFFFF;
+				width: 100%;
+				height: 1px;
+				margin-top: -20px;
+				/**line-height: 50%;**/}
+
+.sidenav {height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111111;
+		overflow-x: hidden;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		padding-top: 60px;}
+
+.sidenavlinkicons {color: #FFFFFF;
+					display: grid;
+					justify-content: center;
+					background-color: #FFFFFF;
+					border-left: #000000 solid 3px;
+					border-right: #000000 solid 3px;}
+
+.sidenav p {color: #FFFFFF;
+			font-size: 25px;}
+
+.sidenav a {padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #FFFFFF; /** #818181 **/
+			display: block;
+			transition: 0.3s;
+			-webkit-transition: 0.3s;
+			-moz-transition: 0.3s;
+			-o-transition: 0.3s;}
+
+.sidenav a:hover {color: #f1f1f1;}
+
+.sidenav .closebtn {position: absolute;
+					top: 0;
+					right: 25px;
+					font-size: 36px;
+					margin-left: 50px;}
+
+#navbutton {position: absolute;
+			left: 45px;
+			top: 40px;}
+
+#overlay {/**position: absolute;
+		display: block;**/
+		/**width: auto; /* Full width (cover the whole page) **/
+		/**height: auto; /* Full height (cover the whole page) **/
+		/**top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;**/
+		/**background-color: rgba(0,0,0,0.5); /* Black background with opacity **/
+		color: #0000008a;
+		/**z-index: 2;**/ /* Specify a stack order in case you're using a different order for other elements */
+		/**cursor: pointer;**/ /* Add a pointer on hover */}
+
+main {background-color: #FFFFFF;
+	color: #FF0000;
+	padding: 10px 20px;
+	display: block;
+	overflow: auto;
+	grid-row: 3 / 4;
+	grid-column: 1 / 3;}
+
+#mainfade {opacity: 0;
+			transition: 1s ease-in;
+			-webkit-transition: 1s ease-in;
+			-moz-transition: 1s ease-in;
+			-o-transition: 1s ease-in;}
+
+main p {color: #0000FF;
+		padding-top: 0px;
+		margin-top: 12px;}
+
+footer {font-size: 70%;
+		text-align: center;
+		font-style: italic;
+		padding: 10px;
+		background-color: #E0ECFF;
+		clear: both;
+		grid-row: 4 / 5;
+		grid-column: 1 / 3;}
