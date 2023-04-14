@@ -1,0 +1,55 @@
+* {box-sizing: border-box;}
+
+@media only screen and (min-device-width: 1450px) {
+	#thesidenav {display: none;}
+	#navbutton {display: none;}
+	#myformmobile {display: none;}
+	.mobilebr {display: none;}
+	.horizontal_line {display: none;}
+	.sidenavlinkicons {display: none;}
+}
+
+nav {font-size: 120%;}
+
+main p {font-size: 20px !important;}
+
+fieldset {float: left;
+		margin: auto;
+		padding: 5px;
+		border-radius: 5px;
+		border: 1px solid #0000FF;
+		width: 340px;}
+
+#fname {width: 335px;
+		/**font-weight: bold;**/
+		font-size: 19px;
+		border: 2px solid #ccc;
+		border-radius: 4px;}
+
+#lname {width: 335px;
+		/**font-weight: bold;**/
+		font-size: 19px;
+		border: 2px solid #ccc;
+		border-radius: 4px;}
+
+#email {width: 335px;
+		/**font-weight: bold;**/
+		font-size: 19px;
+		border: 2px solid #ccc;
+		border-radius: 4px;}
+
+#message {width: 97%;
+		height: 150px;
+		/**padding: 12px 20px;**/
+		box-sizing: border-box;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		/**background-color: #f8f8f8;**/
+		font-size: 16px;
+		/**resize: none;**/}
+
+#sendbuttoncss {font-size: 17px;}
+
+.twitter-follow-button {display: flex !important;}
+
+footer {font-size: 75%;}

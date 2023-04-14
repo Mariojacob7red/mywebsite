@@ -1,0 +1,32 @@
+{
+  "start_url": "./",
+  "name": "Jacob Fuller",
+  "short_name": "Jacob Fuller",
+  "description": "Website portfolio for Jacob Fuller",
+  "icons": [
+  {
+    "src": "favicon.ico",
+    "type": "image/x-icon",
+    "sizes": "100x100"
+  },
+  {
+    "src": "favicon144.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  },
+  {
+    "src": "favicon192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "faviconbigger.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+  ],
+  "display": "standalone",
+  "theme_color": "#FF0000",
+  "background_color": "#000000",
+  "scope": "./"
+}

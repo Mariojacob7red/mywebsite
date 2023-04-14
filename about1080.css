@@ -1,0 +1,21 @@
+* {box-sizing: border-box;}
+
+@media only screen and (min-device-width: 1450px) {
+	#thesidenav {display: none;}
+	#navbutton {display: none;}	
+	.horizontal_line {display: none;}
+	.sidenavlinkicons {display: none;}
+	#slider #prev {font-size: 3rem !important;}
+	#slider #next {font-size: 3rem !important;}
+	/**nav {font-size: 120%;}**/
+}
+
+/**#slider #prev {font-size: 3rem !important;}**/
+
+/**#slider #next {font-size: 3rem !important;}**/
+
+nav {font-size: 120%;}
+
+main p {font-size: 20px !important;}
+
+footer {font-size: 75%;}

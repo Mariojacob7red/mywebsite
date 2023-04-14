@@ -1,0 +1,15 @@
+* {box-sizing: border-box;}
+
+@media only screen and (min-device-width: 1450px) {
+	#thesidenav {display: none;}
+	#navbutton {display: none;}
+	#mobilepdfdiv {display: none;}
+	.horizontal_line {display: none;}
+	.sidenavlinkicons {display: none;}
+}
+
+nav {font-size: 120%;}
+
+main p {font-size: 20px !important;}
+
+footer {font-size: 75%;}

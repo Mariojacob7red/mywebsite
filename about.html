@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jacob Fuller - About</title>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon144.png" type="image/png">
+<link rel="icon" href="favicon192.png" type="image/png">
+<link rel="icon" href="faviconbigger.png" type="image/png">
+<link href="about.css" rel="stylesheet">
+<link href="about1080.css" rel="stylesheet" media="only screen and (min-width: 1450px)">
+<link href="aboutmobile.css" rel="stylesheet" media="only screen and (max-width: 768px)">
+<meta name="viewport" content="width=device-width">
+<link rel="manifest" href="/manifest.webmanifest">
+
+<script type="text/javascript">
+window.onload = function()
+{
+	document.getElementById('headerfade').style.opacity = '1';
+	document.getElementById('bodyfade').style.opacity = '1';
+	document.getElementById('headerfade2').style.opacity = '1';
+	document.getElementById('bodyfade2').style.opacity = '1';
+	document.getElementById('bodyfade4').style.opacity = '1';
+	document.getElementById('headerfade3').style.opacity = '1';
+	document.getElementById('bodyfade3').style.opacity = '1';
+	document.getElementById('floatrighttransform').style.opacity = '1';
+	document.getElementById('floatlefttransform').style.opacity = '1';
+	document.getElementById('horizonsphoto').style.opacity = '1';
+	/**document.getElementById('billboardcss').style.opacity = '1';**/
+	document.getElementById('picturetext1').style.opacity = '1';
+	document.getElementById('slider').style.opacity = '1';
+	responsiveSlider();
+	
+	/**window.scrollTo(300, 500);**/
+	
+	/**document.onreadystatechange = function()
+	{
+		if(document.readyState == "complete")
+		{
+			initApplication();
+		}
+	}**/
+	
+	/**function pageScroll()
+	{
+		window.scrollBy(0,1);
+		scrolldelay = setTimeout(pageScroll,10);
+	}**/
+	
+	/** ▼ ACTUALLY WORKS!! ▼ **/
+	/**window.scrollBy(0,2);**/
+	/**scrolldelay = setTimeout(pageScroll,10);**/
+	/**scrolldelay = setTimeout(function(){window.scrollTo(0,document.body.scrollHeight);}, 2000);**/
+	/**scrolldelay = setTimeout(function(){window.scrollTo(0,document.body.scrollHeight);}, 5000);**/
+	/** ▲ ACTUALLY WORKS!! ▲ **/
+};
+</script> <!-- All of this code up above, within the "script", basically allows me to add animation to specific parts of my website.-->
+
+<!--<script type="javascript">
+/**const alert = document.querySelector('alert');**/
+window.onload = function()
+{
+	var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1
+	if (is_chrome != true)
+	{
+		document.getElementById("alert").style.display = "none";
+	}
+	else
+	{
+		document.getElementById("alert").style.display = "block";
+	}
+}
+</script>-->
+
+</head>
+
+<span id="navbutton" style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav()
+{
+	document.getElementById("thesidenav").style.width = "250px";
+	/**document.body.style.backgroundColor = "rgba(0,0,0,0.4)";**/
+	document.getElementById("overlay").style.color = "#0000008a";
+}
+
+function closeNav()
+{
+	document.getElementById("thesidenav").style.width = "0px";
+	/**document.body.style.backgroundColor = "white";**/
+	document.getElementById("overlay").style.display = "block";
+}
+</script>
+
+<div id="thesidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a>
+		<a href="resume.html">Resume</a>
+		<a href="about.html">About</a>
+		<a href="youtube.html">Portfolio</a>
+		<a href="contact.html">Contact</a>
+	<center><p style="margin: 30px auto 5px auto;">Links</p></center>
+	<!--<div class="horizontal_line"></div>-->
+	<div class="sidenavlinkicons" style="grid-template-columns: 1fr 50px 95px; grid-template-rows: 1fr;">
+	
+		<!-- YouTube Icon -->
+		<a href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" target="_blank" style="padding: unset; margin: 10px auto 5px auto;"><img src="images/youtubeofflogo.png" width="62" height="25" id="Youtube" alt="Subscribe to Mariojacob7red on YouTube" Title="Mariojacob7red on YouTube"/></a>
+		
+		<!-- Twitter Icon -->
+		<a href="https://twitter.com/mariojacob7red?ref_src=twsrc%5Etfw" target="_blank" style="padding: unset; margin: 10px auto 5px auto;"><img src="images/Twitterlogo.png" width="25" height="25" id="Twitter" alt="Mariojacob7red on Twitter" Title="@Mariojacob7red - Twitter"/></a>
+		
+		<!-- LinkedIn -->
+		<a href="https://www.linkedin.com/in/jacobfuller7/" target="_blank" style="padding: unset; margin: 10px auto 5px auto;"><img src="images/Logo_Linkedin.png" width="22px" height="22px" alt="Jacob Fuller on LinkedIn" Title="Jacob Fuller on LinkedIn" style="margin-bottom: 2px;"/></a>
+		
+		<!-- Instagram -->
+		<a href="https://www.instagram.com/Realmariojacob7red" target="_blank" style="padding: unset; margin: 10px auto 5px auto;"><img src="images/Instagram.png" width="25px" height="25px" alt="Realmariojacob7red on Instagram" Title="Realmariojacob7red on Instagram"/></a>
+		
+		<!-- Planet Minecraft -->
+		<a href="https://www.planetminecraft.com/member/mariojacob7red/" target="_blank" style="padding: unset; margin: 10px auto 5px auto; /*! grid-column: 3/4; */"><img src="images/PlanetMinecraft.png" width="25px" height="25px" alt="Mariojacob7red on Planet Minecraft" Title="Mariojacob7red on Planet Minecraft"/></a>
+		
+		<!-- DeviantArt -->
+		<a href="https://www.deviantart.com/mariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/DeviantArt_Logo_smaller.png" width="25px" height="25px" alt="Mariojacob7red on DeviantArt" Title="Mariojacob7red on DeviantArt"/></a>
+	</div>
+</div>
+
+<body>
+<!--<div id="wrapper">-->
+  <header style="display: grid;">
+    <h1 style="grid-row: 1/2; grid-column: 1/2;">Jacob Fuller</h1>
+	
+	<div id="Homelogo">
+		<a href="index.html"><img src="images/seniorpicture_(cropped_10).jpg" alt="Home" Title="Home"/></a>
+	</div>
+	
+	<div id="links-container">
+		<div class="centered">
+			<div id="links">
+				<a href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" target="_blank" style="filter: drop-shadow(0px 0px 4px #FFFFFF);"><img src="images/youtubeofflogo.png" width="62" height="25" id="Youtube" alt="Subscribe to Mariojacob7red on YouTube" Title="Mariojacob7red on YouTube"/></a><!-- YouTube Icon -->
+			
+				<a href="https://twitter.com/mariojacob7red?ref_src=twsrc%5Etfw" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/Twitterlogo.png" width="25" height="25" id="Twitter" alt="Mariojacob7red on Twitter" Title="@Mariojacob7red - Twitter"/></a> <!-- Twitter Icon -->
+				
+				<a href="https://www.linkedin.com/in/jacobfuller7/" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/Logo_Linkedin.png" width="22px" height="22px" alt="Jacob Fuller on LinkedIn" Title="Jacob Fuller on LinkedIn" style="margin-bottom: 2px;"/></a>
+				
+				<a href="https://www.instagram.com/Realmariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/Instagram.png" width="25px" height="25px" alt="Realmariojacob7red on Instagram" Title="Realmariojacob7red on Instagram"/></a>
+				
+				<a href="https://www.planetminecraft.com/member/mariojacob7red/" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/PlanetMinecraft.png" width="25px" height="25px" alt="Mariojacob7red on Planet Minecraft" Title="Mariojacob7red on Planet Minecraft"/></a>
+				
+				<a href="https://www.deviantart.com/mariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/DeviantArt_Logo_smaller.png" width="25px" height="25px" alt="Mariojacob7red on DeviantArt" Title="Mariojacob7red on DeviantArt"/></a>
+			</div>
+		</div>
+	</div>
+	
+  </header>
+  <nav id="navid">
+    <ul>
+		<li class="dropdown">
+			<a href="index.html" class="dropbutton">Home <i class="arrow down"></i></a>
+			<div class="dropdown-content">
+				<a href="resume.html">Resume</a>
+			</div>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="youtube.html">Portfolio</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul> 
+   </nav>
+   <center>
+	<!--<div id="alert">
+		<span id="alertclosebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			My About page does not want to work properly on the Brave browser. Please try a different browser like Mozilla Firefox (Recommended) or Google Chrome. Thank you.
+	</div>-->
+	<main>
+		<!-- 1st Section -->
+		<h2 id="headerfade">My Background</h2>
+			<a href="images/Jacob/Jacob3yearsold.jpg"><img src="images/Jacob/Jacob3yearsold.jpg" width="430px" id="floatrighttransform" alt="Jacob Fuller at 3 years old" Title="Jacob - 3 Years Old" style="transition-delay: 1.5s;"/></a>
+			
+			<p id="bodyfade">I grew up in Western Arkansas in a place called Greenwood. Even though I only lived there until I was 4 years old, I still consider it home. I have been moving around from house to house growing up with my family, and the total has reached 10 times that I have moved into different houses. All in all, I'm glad my family finally found the perfect place to call home in Branson, Missouri.</p>
+			
+		<!-- 2nd Section -->	
+		<h2 id="headerfade2" style="transition-delay: 0.5s;">My Hobbies</h2>
+			<a href="images/PlayingTennis.jpg"><img src="images/PlayingTennis.jpg" width="430px" id="floatlefttransform" alt="Jacob Playing Tennis" Title="Jacob playing Tennis" style="transition-delay: 2s;"/></a>
+			
+			<p id="bodyfade2" style="transition-delay: 0.5s;">I have a lot of hobbies and passions that I won't be able to list them all. One particular hobbie I have is that I love playing video games! Especially if they are Mario games made by Nintendo.
+			<br>
+			<br>
+			I make YouTube videos in my free time and I've been doing it for the past 10 years, since April 26, 2012. I don't do it for the money. I do it because I have fun making videos for my viewers to watch and it's great that I can bring happiness to anybody that manages to find my videos online! :D
+			<br>
+			<br>
+			Back in September of 2020, I became the director of the club, Horizon's Project, on campus. At first, I thought it was going to be stressful being in charge of a club, but after I started planning club activities and getting to play video games over SBU's Twitch channel, I found out it was really fun! I was sad to have to leave the club when I graduated from SBU, but I still plan to help them out any way I can for the next few years to come!</p>
+			<br>
+			<!--<br id="1080brlines">
+			<br id="1080brlines">-->
+			<a href="images/Horizon's_Project_Advertisement.jpg"><img src="images/Horizon's_Project_Advertisement.jpg" style="transition-delay: 2.5s; width: 700px;" id="horizonsphoto" alt="Horizon's Project Advertisement at SBU" Title="Horizon's Project Advertisement at SBU"></a>
+			<br>
+			<br>
+			<p id="bodyfade4" style="transition-delay: 0.5s;">One of my other hobbies includes playing tennis. I love playing it with other people too when I get a chance. Now that I think about it, I grew up playing a lot of sports. The only one I haven't played before is soccer.</p>
+			
+		<!-- 3rd Section -->	
+		<h2 id="headerfade3" style="transition-delay: 1s;">My Skills</h2>
+		
+			<p id="bodyfade3" style="transition-delay: 1s;"><!--This is a really good topic for me to think about because I don't think I've ever really thought about it in full detail before regarding what I might think I've got really good skills at.
+			<br>
+			<br>-->
+			I love using programs like Adobe Photoshop and I'm starting to get really good at using Adobe InDesign. I've used Adobe Illustrator a few times before in the past, but I need to use it more to get acquainted with the software once again. I'm really good at using Cyberlink PowerDirector 8. It's the program I've used to make every video on my YouTube channel and I'd like to try out other software someday too when I can afford it.</p>
+		<br>
+		
+		<center>
+			<p id="picturetext1" style="font-weight: bold; width: 1000px; transition-delay: 3s;">What I've got below are a few examples of some of my YouTube thumbnails I created. Almost all of them I made from scratch using elements from other photos, screenshots or renders. I'll add some more soon for all of you to be able to look at.</p>
+			<!-- These are the websites I followed for making the automatic image slider:
+				►https://www.foolishdeveloper.com/2021/07/automatic-image-slider.html
+				►https://dev.to/code_mystery/automatic-image-slider-using-html-css-javascript-nf8
+			-->
+			<div id="slider" style="transition-delay: 3.5s;">
+				<ul id="slideWrap">
+					<li><a href="images/3DAllStarsThumbnail.jpg" target="_blank" title="Super Mario 3D All Stars - YouTube Thumbnail"/><img src="images/3DAllStarsThumbnail.jpg"/></a></li>
+					<li><a href="images/MinecraftSecurityCraftModUpdate.jpg" target="_blank" title="Minecraft Security Craft Mod Update - YouTube Thumbnail"/><img src="images/MinecraftSecurityCraftModUpdate.jpg"/></a></li>
+					<li><a href="images/FNAF_Security_Breach_Part_1.jpg" target="_blank" title="FNAF Security Breach - Part 1 - YouTube Thumbnail"/><img src="images/FNAF_Security_Breach_Part_1.jpg"/></a></li>
+					<li><a href="images/Check_Me_Out_Channel_Patch.jpg" target="_blank" title="How to Fix the Check Mii Out Channel - YouTube Thumbnail"/><img src="images/Check_Me_Out_Channel_Patch.jpg"/></a></li>
+					<li><a href="images/mario_party_7_minecraft_edition_planet_minecraft_thumbnail.jpg" target="_blank" title="Mario Party 7: Minecraft Edition Planet Minecraft Thumbnail"/><img src="images/mario_party_7_minecraft_edition_planet_minecraft_thumbnail.jpg"/></a></li>
+				</ul>
+				
+				<p id="prev">◄</p> <!-- "&#9668;" is the code to get it. -->
+				<p id="next">►</p> <!-- "&#9658;" is the code to get it. -->
+				
+			</div>
+		</center>
+		
+		<!-- ▼ Adds animation and functionality to the automatic scrolling images. ▼ -->
+		<script>
+			var responsiveSlider = function()
+			{
+				var slider = document.getElementById("slider");
+				var sliderWidth = slider.offsetWidth;
+				var slideList = document.getElementById("slideWrap");
+				var count = 1;
+				var items = slideList.querySelectorAll("li").length;
+				var prev = document.getElementById("prev");
+				var next = document.getElementById("next");
+				
+				window.addEventListener('resize', function()
+				{
+					sliderWidth = slider.offsetWidth;
+				});
+				
+				var prevSlide = function()
+				{
+					if(count > 1)
+					{
+						count = count - 2;
+						slideList.style.left = "-" + count * sliderWidth + "px";
+						count++;
+					}
+					else if(count = 1)
+					{
+						count = items - 1;
+						slideList.style.left = "-" + count * sliderWidth + "px";
+						count++;
+					}
+				};
+				
+				var nextSlide = function()
+				{
+					if(count < items)
+					{
+						slideList.style.left = "-" + count * sliderWidth + "px";
+						count++;
+					}
+					else if(count = items)
+					{
+						slideList.style.left = "0px";
+						count = 1;
+					}
+				};
+				
+				next.addEventListener("click", function()
+				{
+					nextSlide();
+				});
+				
+				prev.addEventListener("click", function()
+				{
+					prevSlide();
+				});
+				
+				setInterval(function()
+				{
+					nextSlide()
+				}, 10000);
+			};
+			
+			/**window.onload = function()
+			{
+				responsiveSlider();
+			}**/
+		</script>
+		<!-- (Within the "setInterval" area, where the number is, that's where you can set how long of a wait it will be before the slider advances to the next image you have. Ex. 10000 = 10 seconds.) -->
+	<br>	
+   </main>
+   </center>
+   <footer>Copyright &copy; Jacob Fuller 2023</footer>
+  <!--</div>--> <!-- end of wrapper -->
+</body>
+</html>
+
+
