@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nintendo - Storyboard</title>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="storyboard.css" rel="stylesheet">
+
+<script type="text/javascript"> <!-- Fades the storyboard image in when the page loads. -->
+window.onload = function()
+{
+	document.getElementById('storyboardfade').style.opacity = '1';
+	document.getElementById('fadeimage').style.opacity = '1';
+}
+</script>
+
+</head>
+<body>
+<a href="../youtube.html"><button style="width: 80px;" Title="Go Back to Jacob Fuller">← Go Back</button></a>
+<div id="wrapper">
+  <header style="display: grid;"> <!-- Search element - page 428 -->
+    <h1 style="grid-row: 1/2; grid-column: 1/2;">Nintendo</h1>
+	
+	<div id="Homelogo">
+		<a href="index.html"><img src="images/nintendo_icon.png" alt="Home" Title="Home"></a>
+	</div> <!-- I found that if I add 'Title=""' in a picture, it will display whatever text I want when a mouse hovers over it. So, I added the title part to some other elements on my website. -->
+  </header>
+  <nav>
+    <ul>
+		<li class="dropdown">
+			<a href="index.html" class="dropbutton">Home ▼</a>
+			<div class="dropdown-content">
+				<a href="commercial.html">Commercial</a>
+				<!--<a href="images/Storyboard(Old).jpg">Storyboard</a>-->
+				<a href="storyboard.html">Storyboard</a>
+			</div>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="youtube.html">TV & Radio</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul> 
+   </nav> 
+  <main>
+	<div id="aligncontentcenter">
+		<p id="storyboardfade">Storyboard</p>
+		<div id="fadeimage" style="transition-delay: 0.5s;">
+			<a href="images/Storyboard_Updated.jpg"><img src="images/Storyboard_Updated.jpg" alt="Storyboard for Nintendo Retro<sup>&trade;</sup> Commercial" Title="Nintendo Retro Storyboard" id="storyboardcss" style="width: 900px; height: 1236px;"></a>
+		</div>
+	</div>
+  
+  <!--<p id="textcolor">This is the official release trailer for the Nintendo Retro<sup>&trade;</sup>.</p>-->
+  <!--<div id="buttonstuff">
+	<a href="images/Storyboard(Old).jpg"><button>View Full Size Picture</button></a>
+  </div>-->
+  </main> 
+  <footer>&copy; Nintendo 2021
+  <br>
+  Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA</footer>
+  </div> <!-- end of wrapper -->
+</body>
+</html>
+
+

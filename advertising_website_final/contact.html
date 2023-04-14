@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nintendo - Contact</title> <!-- page 426 -->
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="contact.css" rel="stylesheet">
+<!--<link href="contactsmaller.css" rel="stylesheet" media="only screen and (max-width: 1024px)">-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+<script type="text/javascript">
+(function()
+	{
+		emailjs.init("user_t8Fcg9aTBcC9W4dRXSFxD");
+	})();
+</script> <!-- I found this website called EmailJS that uses javascript to email me anybody's message and it can send them back an auto replay to thank them for contacting me. It took many trial to set it up the way I wanted (including the design part of it) and I'm glad I came across it. https://www.emailjs.com/docs/introduction/how-does-emailjs-work/ I learned it on one of these tutorial pages and I was able to customize the code to my liking. I think this took me about 3 - 4 days to find this website and learn how to make it work.-->
+
+<script type="text/javascript">
+window.onload = function()
+{
+	document.getElementById('mainfade').style.opacity = '1';
+	document.getElementById('contact-form').addEventListener('submit', function(event)
+	{
+		event.preventDefault();
+		// generate the contact number value
+		this.contact_number.value = Math.random() * 100000 | 0;
+		emailjs.sendForm('contact_service', 'contact_form', this);
+	});
+}
+</script>
+
+</head>
+<body>
+<a href="../youtube.html"><button style="width: 80px;" Title="Go Back to Jacob Fuller">← Go Back</button></a>
+<div id="wrapper">
+<header style="display: grid;">
+	<h1 style="grid-row: 1/2; grid-column: 1/2;">Nintendo</h1>
+	
+	<div id="Homelogo">
+		<a href="index.html"><img src="images/nintendo_icon.png" alt="Home" Title="Home"></a>
+	</div>
+</header>
+<nav>
+	<ul>
+		<li class="dropdown">
+			<a href="index.html" class="dropbutton">Home ▼</a>
+			<div class="dropdown-content">
+				<a href="commercial.html">Commercial</a>
+				<!--<a href="images/Storyboard(Old).jpg">Storyboard</a>-->
+				<a href="storyboard.html">Storyboard</a>
+			</div>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="youtube.html">TV & Radio</a></li>
+		<li><a href="contact.html">Contact</a></li> <!-- <a href="contact.html" onclick="alert('Hi');">Contact</a></li> -->
+	</ul>
+</nav>
+<main id="mainfade">
+	<!--<input type="button" value="Hi" onclick="alert('Welcome!');">-->
+	<h2>Have a Question you Want to Ask?</h2>
+	<p style="margin-top: 0px; font-size: small;">Fill out the form below and we'll get back to you as soon as possible!</p>
+		<form id="myform" onsubmit="emailjs.sendForm('default_service', 'template_Ud3k9Zdy', this); return false;" method="post">
+			<input type="text" name="fname" id="fname" tabindex="1" required="required" placeholder="First Name" Title="Please enter your first name.">
+			<input type="text" name="lname" id="lname" tabindex="2" required="required" placeholder="Last Name" Title="Please enter your last name.">
+			<br>
+			<br>
+			<input type="email" name="email" id="email" tabindex="3" placeholder="Email" Title="Please enter a valid email address. Ex: you@yourdomain.com">
+			<br>
+			<br>
+			Message:
+			<br>
+			<textarea name="message" rows="4" cols="40" tabindex="4"></textarea>
+			<br>
+			<br>
+			<button onclick="setTimeout(messageSent, 1000)">Send</button> <!--I learned more about the alert function from here. -> https://www.w3schools.com/js/js_popup.asp And I learned how to set the timing from here. -> https://www.w3schools.com/js/js_timing.asp -->
+		</form>
+		
+		<script>
+			function messageSent()
+				{
+					alert("Woohoo!\nYour message has been sent. :D");
+				}
+		</script>
+	<br>
+	<!--<a href="https://www.youtube.com/subscription_center?add_user_id=w-MSx7SJdqGJv3Z2Oump5w&feature=creators_corner-//s.ytimg.com/yt/img/creators_corner/200x35_as_seen_red.png"><img src="images/youtubeofflogo.png" width="125" height="50" alt="Subscribe to Nintendo on YouTube" Title="Nintendo on YouTube"/></a><img src="images/youtubeofflogo.png" width="125" height="50" style="display: none"/>-->
+	
+	<a href="https://www.youtube.com/user/nintendo?sub_confirmation=1"><img src="images/youtubeofflogo.png" width="125" height="50" alt="Subscribe to Nintendo on YouTube" Title="Nintendo on YouTube"/></a><img src="images/youtubeofflogo.png" width="125" height="50" style="display: none"/>
+	
+	<br>
+	
+	<a href="https://twitter.com/NintendoAmerica?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="true">Follow @nintendo on Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <!-- Twitter Follow Button -->
+	
+	<br>
+	<br>
+</main>
+<footer>&copy; Nintendo 2021
+<br>
+Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA</footer>
+</div> <!-- end of wrapper -->
+</body>
+</html>
+
+
