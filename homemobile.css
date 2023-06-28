@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-width: 720px), (max-width: 1080px) {
 	#navid {display: none;}
 	#links-container {display: none;}
 	#links {display: none;}

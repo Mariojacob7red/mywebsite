@@ -7,9 +7,9 @@
 <link rel="icon" href="favicon144.png" type="image/png">
 <link rel="icon" href="favicon192.png" type="image/png">
 <link rel="icon" href="faviconbigger.png" type="image/png">
-<link href="home.css" rel="stylesheet">
-<link href="home1080.css" rel="stylesheet" media="only screen and (min-width: 1450px)">
-<link href="homemobile.css" rel="stylesheet" media="only screen and (max-width: 768px)">
+<link href="home.css" rel="stylesheet" media="only screen and (min-width: 1080px)">
+<link href="home1080.css" rel="stylesheet" media="only screen and (min-width: 1440px)">
+<link href="homemobile.css" rel="stylesheet" media="only screen and (max-width: 720px), (max-width: 1080px)">
 <meta name="viewport" content="width=device-width">
 <link rel="manifest" href="/manifest.webmanifest">
 
@@ -23,6 +23,13 @@
 		navigator.serviceWorker.register('sw.js');
 	}
 </script>
+
+<!-- ▼ Detects if the website is running on a Desktop or Mobile device. ▼ -->
+<script>
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	var element = document.getElementById('');
+</script>
+<!-- ▲ Detects if the website is running on a Desktop or Mobile device. ▲ -->
 
 <script type="text/javascript">
 window.onload = function()
@@ -139,3 +146,5 @@ function closeNav()
 </body>
 </div>
 </html>
+
+

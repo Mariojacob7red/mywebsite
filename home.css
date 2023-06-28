@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 
-@media only screen and (min-device-width: 720px) {
+@media only screen and (min-width: 1080px) {
 	#thesidenav {display: none;}
 	#navbutton {display: none;}
 	.horizontal_line {display: none;}
