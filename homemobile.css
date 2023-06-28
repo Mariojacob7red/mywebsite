@@ -25,10 +25,7 @@ sup {vertical-align: super;
 #Homelogo {position: absolute;
 		display: contents;}
 
-#links-container {position: absolute;
-				display: flex;
-				top: 95px;
-				right: 60px;}
+#links-container {display: none;}
 
 #links {/**position: absolute; /** Easier to use then the Twitter and Youtube ids. **/
 		/**display: flex;
@@ -193,6 +190,8 @@ h4 {color: #0000FF;
 #navbutton {position: absolute;
 			left: 45px;
 			top: 40px;}
+
+#navid {display: none;}
 
 #overlay {/**position: absolute;
 		display: block;**/
