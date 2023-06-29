@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-width: 1080px) {
 	#navid {display: none;}
 	#links-container {display: none;}
 	#links {display: none;}
@@ -97,10 +97,7 @@ sup {vertical-align: super;
 
 #Homelogo {display: none;}
 
-#links-container {position: absolute;
-				display: flex;
-				top: 95px;
-				right: 60px;}
+#links-container {display: none;}
 
 #links {background-color: black;
 		background: #0000003b;
@@ -369,6 +366,8 @@ main {background-color: #FFFFFF;
 	overflow: auto;
 	grid-row: 3 / 4;
 	grid-column: 1 / 3;}
+
+#navid {display: none;}
 
 /**center {background-color: #FFFFFF85;}**/
 

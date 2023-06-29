@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 
-@media only screen and (max-device-width: 720px) {
+@media only screen and (max-width: 1080px) {
 	#navid {display: none;}
 	#links-container {display: none;}
 	#links {display: none;}
@@ -25,10 +25,7 @@ body {/**background-color: #FD8B8B;**/
 
 #Homelogo {display: none;}
 
-#links-container {position: absolute;
-				display: flex;
-				top: 95px;
-				right: 60px;}
+#links-container {display: none;}
 
 #links {background-color: black;
 		background: #0000003b;
@@ -177,6 +174,8 @@ h3 {font-family: "Courier New", Verdana, sans-serif;
 #navbutton {position: absolute;
 			left: 40px;
 			top: 25px;}
+
+#navid {display: none;}
 
 div1 ul {list-style-type: none;
 		margin: 0;

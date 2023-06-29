@@ -1,6 +1,6 @@
 * {box-sizing: border-box;}
 
-@media only screen and (max-device-width: 720px)
+@media only screen and (max-width: 1080px)
 {
 	#navid {display: none;}
 	#links-container {display: none;}
@@ -27,10 +27,7 @@ sup {vertical-align: super;
 
 #Homelogo {display: none;}
 
-#links-container {position: absolute;
-				display: flex;
-				top: 95px;
-				right: 60px;}
+#links-container {display: none;}
 
 #links {background-color: black;
 		background: #0000003b;
@@ -266,6 +263,8 @@ h2 {color: #FF0000; /**#B3C7E6**/
 #navbutton {position: absolute;
 			left: 40px;
 			top: 25px;}
+
+#navid {none;}
 
 main {background-color: #FFFFFF;
 	color: #000000;
