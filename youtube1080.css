@@ -11,6 +11,10 @@
 
 nav {font-size: 120%;}
 
+#slider #prev {font-size: 50px !important;}
+
+#slider #next {font-size: 50px !important;}
+
 main p {font-size: 20px !important;}
 
 footer {font-size: 75%;}
