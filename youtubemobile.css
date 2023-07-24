@@ -125,15 +125,15 @@ sup {vertical-align: super;
 					-moz-transition: 0.5s ease-in;
 					-o-transition: 0.5s ease-in;}
 
-#bignickle {width: 350px !important;
-			height: 281px !important;
-			margin-left: 210.5px;
-			margin-right: 210.5px;}
+#bignickle {width: 322px !important;
+			height: 259px !important;
+			/**margin-left: 210.5px;
+			margin-right: 210.5px;**/}
 
 #newlogo {width: 500px !important;
 		height: 281px !important;
-		margin-left: 135.5px;
-		margin-left: 135.5px;}
+		/**margin-left: 135.5px;
+		margin-left: 135.5px;**/}
 
 #homesteadcolor {color: #dc8f23;}
 
@@ -293,7 +293,9 @@ h2 {color: #FF0000; /**#B3C7E6**/
 /** ▼ Automatic Scrolling Images ▼ **/
 
 #slider {position: relative;
-		width: 771px;
+		/**width: 771px;
+		height: 281px;**/
+		width: 322px;
 		height: 281px;
 		overflow: hidden;
 		/**box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);**/
