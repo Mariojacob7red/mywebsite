@@ -130,8 +130,9 @@ sup {vertical-align: super;
 			/**margin-left: 210.5px;
 			margin-right: 210.5px;**/}
 
-#newlogo {width: 500px !important;
-		height: 281px !important;
+#newlogo {width: 322px !important;
+		height: 181px !important;
+		margin-top: 42px;
 		/**margin-left: 135.5px;
 		margin-left: 135.5px;**/}
 
