@@ -169,17 +169,8 @@ sup {vertical-align: super;
 			-moz-transition: 0.5s ease-in;
 			-o-transition: 0.5s ease-in;}
 
-#bignickle {width: 350px !important;
-			height: 281px !important;
-			margin-left: 112.5px;
-			margin-right: 112.5px;}
-
-#newlogo {width: 500px !important;
-		height: 281px !important;
-		margin-left: 37.5px;
-		margin-left: 37.5px;}
-
-#homesteadcolor {color: #dc8f23;}
+#homesteadcolor {/**color: #dc8f23;**/
+				color: #00a2ff;}
 
 #textalign1 {grid-row: 2/3;
 			grid-column: 2/3;
