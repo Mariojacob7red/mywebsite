@@ -25,7 +25,11 @@ window.onload = function()
 	document.getElementById('imagealign3').style.opacity = '1';
 	document.getElementById('slider').style.opacity = '1';
 	document.getElementById('textalign3').style.opacity = '1';
+	document.getElementById('imagealign4').style.opacity = '1';
+	document.getElementById('slider2').style.opacity = '1';
+	document.getElementById('textalign4').style.opacity = '1';
 	responsiveSlider();
+	responsiveSlider2();
 }
 </script>
 
@@ -261,6 +265,89 @@ function closeNav()
 	</script>
 	<!-- (Within the "setInterval" area, where the number is, that's where you can set how long of a wait it will be before the slider advances to the next image you have. Ex. 10000 = 10 seconds.) -->
 	<!----- ▲ 3rd Project Script End ▲ ----->
+	
+	<!----- ▼ 4th Project ▼ ----->
+	<div id="imagealign4" style="transition-delay: 2s;">
+		<div id="slider2" style="transition-delay: 2s;">
+			<ul id="slideWrap2">
+				<li><a href="images/GraphicDesignProjects/original_billboard.jpg" target="_blank" title="Original Billboard"/><img src="images/GraphicDesignProjects/original_billboard.jpg"/></a></li>
+				<li><a href="images/GraphicDesignProjects/billboard_redesign_3rd_version.jpg" target="_blank" title="My New Billboard Design"/><img src="images/GraphicDesignProjects/billboard_redesign_3rd_version_1920x1080.jpg"/></a></li>
+			</ul>
+			
+			<p id="prev2">◄</p> <!-- "&#9668;" is the code to get it. -->
+			<p id="next2">►</p> <!-- "&#9658;" is the code to get it. -->
+			
+		</div>
+	</div>
+	
+	<div id="textalign4" style="transition-delay: 2s;">
+		<p id="bodytext">One of my Graphic Design Production class projects was to recreate a billboard of our choice and I decided to recreate this extremely busy sign to make it more readble from the highway in Ozark, MO.</p>
+	</div>
+	<!----- ▲ 4th Project End ▲ ----->
+	<!----- ▼ 4th Project Script ▼ ----->
+	<script>
+	var responsiveSlider2 = function()
+		{
+			var slider2 = document.getElementById("slider2");
+			var sliderWidth2 = slider2.offsetWidth;
+			var slideList2 = document.getElementById("slideWrap2");
+			var count2 = 1;
+			var items2 = slideList2.querySelectorAll("li").length;
+			var prev2 = document.getElementById("prev2");
+			var next2 = document.getElementById("next2");
+			
+			window.addEventListener('resize', function()
+			{
+				sliderWidth2 = slider2.offsetWidth;
+			});
+			
+			var prevSlide2 = function()
+			{
+				if(count2 > 1)
+				{
+					count2 = count2 - 2;
+					slideList2.style.left = "-" + count2 * sliderWidth2 + "px";
+					count2++;
+				}
+				else if(count2 = 1)
+				{
+					count2 = items2 - 1;
+					slideList2.style.left = "-" + count2 * sliderWidth2 + "px";
+					count2++;
+				}
+			};
+			
+			var nextSlide2 = function()
+			{
+				if(count2 < items2)
+				{
+					slideList2.style.left = "-" + count2 * sliderWidth2 + "px";
+					count2++;
+				}
+				else if(count2 = items2)
+				{
+					slideList2.style.left = "0px";
+					count2 = 1;
+				}
+			};
+			
+			next2.addEventListener("click", function()
+			{
+				nextSlide2();
+			});
+			
+			prev2.addEventListener("click", function()
+			{
+				prevSlide2();
+			});
+			
+			setInterval(function()
+			{
+				nextSlide2()
+			}, 10000);
+		};
+	</script>
+	<!----- ▲ 4th Project Script End ▲ ----->
 	<!----- ▲ Main Content ▲ ----->
 	
 </main>
