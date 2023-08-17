@@ -362,7 +362,7 @@ h2 {color: #FF0000; /**#B3C7E6**/
 							color: #d5d5d5;
 							text-decoration: none;
 							position: absolute;
-							top: 14% !important;
+							top: 20% !important;
 							transform: translateY(-50%);
 							-webkit-transform: translateY(-50%);
 							-moz-transform: translateY(-50%);
@@ -387,7 +387,7 @@ h2 {color: #FF0000; /**#B3C7E6**/
 /** ▼ Automatic Scrolling Images 2 ▼ **/
 
 #slider2 {position: relative;
-		width: 575px;
+		width: 322px;
 		height: 181px;
 		overflow: hidden;
 		/**box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);**/
@@ -426,7 +426,7 @@ h2 {color: #FF0000; /**#B3C7E6**/
 							color: #d5d5d5;
 							text-decoration: none;
 							position: absolute;
-							top: 32%;
+							top: 20% !important;
 							transform: translateY(-50%);
 							-webkit-transform: translateY(-50%);
 							-moz-transform: translateY(-50%);
