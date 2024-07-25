@@ -3,7 +3,9 @@
 @media only screen and (min-width: 1440px) {
 	#thesidenav {display: none;}
 	#navbutton {display: none;}
-	.horizontal_line {display: none;}
+	#smallerpiconly {display: none;}
+	#mobilepiconly {display: none;}
+	.horizontalline {display: none;}
 	.sidenavlinkicons {display: none;}
 }
 

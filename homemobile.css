@@ -4,8 +4,13 @@
 	#navid {display: none;}
 	#links-container {display: none;}
 	#links {display: none;}
+	#1080piconly {display: none;}
+	#smallerpiconly {display: none;}
 	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}}
+	.sidenav a {font-size: 18px;}
+}
+
+html {scroll-behavior: smooth;}
 
 @font-face {font-family: Pretendo;
 			src: url(fonts/Pretendo.woff) format("woff");}
@@ -76,6 +81,11 @@ sup {vertical-align: super;
 #HomePhoto {box-shadow: 5px 5px 10px #1E1E1E;
 			border: 5px solid #FFFFFF;
 			display: none;}
+
+.horizontalline {background-color: #000000;
+				width: 100%;
+				height: 1px;
+				line-height: 50%;}
 
 .aligncontentcenter {display: flex;
 					justify-content: center;}
@@ -224,6 +234,49 @@ main p {color: #0000FF;
 		padding-top: 0px;
 		margin-top: 12px;}
 
+#exlitext {background-color: #FFFFFF;
+		color: #FF0000;
+		padding-top: 0px;
+		margin: auto;
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;}
+
+/** ▼ More Portfolio Stuff ▼ **/
+.gridtemplate {display: grid;
+				grid-template-columns: 100%;
+				background-color: #FFFFFF;
+				color: #FF0000;
+				padding: 10px 20px;}
+
+.gridformat {display: flex;
+			justify-content: center;
+			border: #E0ECFF00 solid 8px;}
+
+.textformat {text-align: center;
+			border: #E0ECFF00 solid 8px;
+			display: flex;
+			/**align-items: center;**/
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			line-height: 1.2; /**0.5 & 23px for 1080 CSS!**/
+			font-size: 18px;}
+
+.textformat a:link {color: #add8e6;}
+.textformat a:visited {color: #add8e6;}
+.textformat a:hover {color: #FFFF00;}
+
+#divfade {/**padding: 10px 20px;**/
+			opacity: 0;
+			transition: 1s ease-in;
+			-webkit-transition: 1s ease-in;
+			-moz-transition: 1s ease-in;
+			-o-transition: 1s ease-in;}
+
+#mobileimg1 a {width: 100px !important;}
+/** ▲ More Portfolio Stuff ▲ **/
+
 footer {font-size: 70%;
 		text-align: center;
 		font-style: italic;
@@ -232,3 +285,87 @@ footer {font-size: 70%;
 		clear: both;
 		grid-row: 4 / 5;
 		grid-column: 1 / 3;}
+
+/** ▼ Scrolling Pictures ▼ **/
+#slider {position: relative;
+		width: 300px !important;
+		height: 169px !important;
+		overflow: hidden;
+		box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
+		opacity: 0;
+		transition: 0.5s ease-in;
+		-webkit-transition: 0.5s ease-in;
+		-moz-transition: 0.5s ease-in;
+		-o-transition: 0.5s ease-in;}
+
+#slider ul {position: relative;
+			list-style: none;
+			height: 100%;
+			width: 10000%;
+			padding: 0;
+			margin: 0;
+			transition: all 750ms ease;
+			-webkit-transition: all 750ms ease;
+			-moz-transition: all 750ms ease;
+			-o-transition: all 750ms ease;
+			left: 0;}
+
+#slider ul li {position: relative;
+				height: 100%;
+				float: left;}
+
+#slider ul li img {width: 300px !important;
+					height: 169px !important;}
+
+#slider #prev, #slider #next {width: 50px;
+							line-height: 50px;
+							border-radius: 50%;
+							font-size: 3rem;
+							/**text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);**/
+							text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+							text-align: center;
+							color: white;
+							text-decoration: none;
+							position: absolute;
+							top: 20% !important;
+							transform: translateY(-50%);
+							-webkit-transform: translateY(-50%);
+							-moz-transform: translateY(-50%);
+							-ms-transform: translateY(-50%);
+							-o-transform: translateY(-50%);
+							transition: all 150ms ease;
+							-webkit-transition: all 150ms ease;
+							-moz-transition: all 150ms ease;
+							-o-transition: all 150ms ease;}
+
+#slider #prev:hover, #slider #next:hover {/**background-color: rgba(0, 0, 0, 0.5);**/
+											text-shadow: 0;
+											color: #FF0000;
+											font-size: 3.5rem;}
+
+#slider #prev {left: 1px;}
+
+#slider #next {right: 1px;}
+/** ▲ Scrolling Pictures ▲ **/
+
+#scrollbutton {display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				font-size: 18px;
+				border: none;
+				outline: none;
+				background-color: #FF0000;
+				color: #E0ECFF;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+				transition: background-color 0.15s linear;
+				-webkit-transition: background-color 0.15s linear;
+				-moz-transition: background-color 0.15s linear;
+				-o-transition: background-color 0.15s linear;}
+
+#scrollbutton:hover {background-color: #E0ECFF;
+					color: #FF0000;
+					border: #FF0000 solid 1px;}
