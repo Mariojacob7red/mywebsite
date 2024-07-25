@@ -4,8 +4,9 @@
 	#navid {display: none;}
 	#links-container {display: none;}
 	#links {display: none;}
-	#1080piconly {display: none;}
+	#biggerpiconly {display: none;}
 	#smallerpiconly {display: none;}
+	#mobilepiconly {display: block;}
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 }

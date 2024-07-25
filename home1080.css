@@ -3,6 +3,7 @@
 @media only screen and (min-width: 1440px) {
 	#thesidenav {display: none;}
 	#navbutton {display: none;}
+	#biggerpiconly {display: block;}
 	#smallerpiconly {display: none;}
 	#mobilepiconly {display: none;}
 	.horizontalline {display: none;}
