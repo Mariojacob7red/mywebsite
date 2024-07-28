@@ -339,6 +339,29 @@ footer {font-size: 70%;
 		grid-row: 4 / 5;
 		grid-column: 1 / 3;}
 
+.updatebanner {background-color: #FF9800;
+				padding: 20px;
+				color: black;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				text-align: center;
+				width: -webkit-fill-available; /**Brave**/
+				width: -moz-available; /**Firefox**/
+				opacity: 1;
+				transition: opacity 0.6s;}
+
+.closebutton {margin-left: 15px;
+				color: white;
+				font-weight: bold;
+				float: right;
+				font-size: 22px;
+				line-height: 20px;
+				cursor: pointer;
+				transition: 0.3s;}
+
+.closebutton:hover {color: black;}
+
 /** ▼ Scrolling Pictures ▼ **/
 #slider {position: relative;
 		width: 650px !important;
