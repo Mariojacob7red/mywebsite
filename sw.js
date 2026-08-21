@@ -87,6 +87,9 @@ self.addEventListener('fetch', function (event)
 				return response || fetch(request).then(function (response)
 				{
 					return response;
+				}).catch(function (error)
+				{
+					console.warn('Failed to fetch', request.url, error);
 				});
 			})
 		);
@@ -102,7 +105,6 @@ self.addEventListener('fetch', function (event)
 			{
 				return response || fetch(request).then(function (response)
 				{
-
 					// Save a copy of it in cache
 					let copy = response.clone();
 					event.waitUntil(caches.open('app').then(function (cache)
@@ -110,9 +112,10 @@ self.addEventListener('fetch', function (event)
 						return cache.put(request, copy);
 					}));
 
-					// Return the response
 					return response;
-
+				}).catch(function (error)
+				{
+					console.warn('Failed to fetch', request.url, error);
 				});
 			})
 		);

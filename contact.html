@@ -31,6 +31,32 @@
 	<link rel="manifest" href="/manifest.webmanifest">
 	<meta name="theme-color" content="#26344D">
 	<style>
+		/* #region Scrollbar */
+		/* ----- Firefox ----- */
+		html
+		{
+			scrollbar-width: auto;
+			/* Colors: thumb color, track color */
+			scrollbar-color: var(--brick) var(--cream-dim);
+		}
+
+		/* ----- Brave ----- */
+		::-webkit-scrollbar
+		{
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+			background: var(--brick);
+		}
+
+		::-webkit-scrollbar-track
+		{
+			background: var(--cream-dim);
+		}
+		/* #endregion Scrollbar */
+
 		:root
 		{
 			/* -- Colors -- */
@@ -40,11 +66,14 @@
 			--charcoal: #2B2320;
 			--charcoal__nochange: #2B2320;
 			--cream: #FAF3E6;
+			--cream__nav: #FAF3E6;
 			--cream__sendbtn: #FAF3E6;
 			--cream__toggle: #1B2537;
 			--cream-dim: #F1E6D2;
 			--cream-dim__toggle: #3A4C6D;
 			--gold: #E8A93D;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #FAF3E6;
 			--navy: #26344D;
 			--navy-dim: #1B2537;
 			--radius-lg: 20px;
@@ -59,10 +88,13 @@
 			--charcoal: #F1E6D2;
 			--charcoal__nochange: #2B2320;
 			--cream: #1B2537;
+			--cream__nav: #FAF3E6;
 			--cream__sendbtn: #FAF3E6;
 			--cream__toggle: #FAF3E6;
 			--cream-dim: #3A4C6D;
 			--cream-dim__toggle: #F1E6D2;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #1B2537;
 		}
 
 			[data-theme="dark"] .icon-light
@@ -191,15 +223,22 @@
 				nav a.active
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--cream__nav);
 				}
 
 				nav a:hover,
 				nav a:focus-visible
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--nav-hover-text);
 					outline: none;
+				}
+
+				nav a.active:hover,
+				nav a.active:focus-visible
+				{
+					background: var(--brick);
+					color: var(--nav-active-hover-text);
 				}
 
 		.nav-spacer
@@ -1011,19 +1050,19 @@
 			<h3>Or find me here</h3>
 			<div class="link-row">
 				<!-- YouTube -->
-				<a class="link-card" href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" title="Mariojacob7red on YouTube">
+				<a class="link-card" href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" title="Mariojacob7red on YouTube" alt="Jacob Fuller's YouTube Channel" target="_blank">
 					<img class="icon-light" src="/images/social-media/youtubeofflogo.png" />
 					<img class="icon-dark" src="/images/social-media/youtubelogo2005jacob.png" />
 				</a>
 
 				<!-- X -->
-				<a class="link-card" href="https://www.x.com/mariojacob7red" title="X - @Mariojacob7red">
+				<a class="link-card" href="https://www.x.com/mariojacob7red" title="X - @Mariojacob7red" alt="Jacob Fuller's X Account" target="_blank">
 					<img class="icon-light" src="/images/social-media/XLogo.png" />
 					<img class="icon-dark" src="/images/social-media/XLogo-white.png" />
 				</a>
 
 				<!-- LinkedIn -->
-				<a class="link-card" href="https://www.linkedin.com/in/jacobfuller7/" title="Jacob Fuller on LinkedIn">
+				<a class="link-card" href="https://www.linkedin.com/in/jacobfuller7/" title="Jacob Fuller on LinkedIn" alt="Jacob Fuller on LinkedIn" target="_blank">
 					<img class="icon-light" src="/images/social-media/Logo_Linkedin.png" />
 					<img class="icon-dark" src="/images/social-media/Logo_Linkedin.png" />
 				</a>

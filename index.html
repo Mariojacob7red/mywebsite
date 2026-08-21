@@ -36,6 +36,73 @@
 	<meta name="keywords" content="jacob, jacob fuller, mariojacob7red, southwest baptist university, sbu, digital marketing, youtube, graphic design, computer science">
 
 	<style>
+		/* #region Scrollbar */
+		/* ----- Firefox ----- */
+		html
+		{
+			scrollbar-width: auto;
+			/* Colors: thumb color, track color */
+			scrollbar-color: var(--brick) var(--cream-dim);
+		}
+
+		/* ----- Brave ----- */
+		::-webkit-scrollbar
+		{
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+			background: var(--brick);
+		}
+
+		::-webkit-scrollbar-track
+		{
+			background: var(--cream-dim);
+		}
+		/* #endregion Scrollbar */
+
+		/* #region Mouse Cursor */
+		/* --- Base/Desktop Default (32 x 32) --- */
+		/*body
+		{
+			cursor: url('/images/cursors/cursor-default.png') 8 2, auto;
+		}
+
+		a, button, .project-card, .nav-link
+		{
+			cursor: url('/images/cursors/cursor-hover.png') 8 2, pointer;
+		}*/
+
+		/* --- Touch devices with an attached mouse (bigger cursor) --- */
+		/*@media (pointer: coarse)
+		{
+			body
+			{
+				cursor: url('/images/cursors/cursor-default-large.png') 16 4, auto;
+			}
+
+			a, button, .project-card, .nav-link
+			{
+				cursor: url('/images/cursors/cursor-hover-large.png') 16 4, pointer;
+			}
+		}*/
+
+		/* --- Large screens / desktop (bigger cursor) --- */
+		/*@media (min-width: 1440px)
+		{
+			body
+			{
+				cursor: url('/images/cursors/cursor-default-large.png') 16 4, auto;
+			}
+
+			a, button, .project-card, .nav-link
+			{
+				cursor: url('/images/cursors/cursor-hover-large.png') 16 4, pointer;
+			}
+		}*/
+		/* #endregion Mouse Cursor */
+
 		:root
 		{
 			/* Colors */
@@ -47,11 +114,14 @@
 			--charcoal: #2B2320;
 			--charcoal__nochange: #2B2320;
 			--cream: #FAF3E6;
+			--cream__nav: #FAF3E6;
 			--cream__portfolio: #FAF3E6;
 			--cream__toggle: #1B2537;
 			--cream-dim: #F1E6D2;
 			--cream-dim__toggle: #3A4C6D;
 			--gold: #E8A93D;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #FAF3E6;
 			--navy: #26344D;
 			--navy-dim: #1B2537;
 			--radius-lg: 20px;
@@ -69,10 +139,13 @@
 			--charcoal: #F1E6D2;
 			--charcoal__nochange: #2B2320;
 			--cream: #1B2537;
+			--cream__nav: #FAF3E6;
 			--cream__portfolio: #FAF3E6;
 			--cream__toggle: #FAF3E6;
 			--cream-dim: #3A4C6D;
 			--cream-dim__toggle: #F1E6D2;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #1B2537;
 		}
 
 			[data-theme="dark"] .icon-light
@@ -200,15 +273,22 @@
 				nav a.active
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--cream__nav);
 				}
 
 				nav a:hover,
 				nav a:focus-visible
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--nav-hover-text);
 					outline: none;
+				}
+
+				nav a.active:hover,
+				nav a.active:focus-visible
+				{
+					background: var(--brick);
+					color: var(--nav-active-hover-text);
 				}
 
 		.nav-spacer
@@ -1189,19 +1269,26 @@
 			<h2>Find me around the web</h2>
 		</div>
 		<div class="links-grid">
-			<a class="link-card" href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" title="Mariojacob7red on YouTube">
+			<!-- YouTube -->
+			<a class="link-card" href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" title="Mariojacob7red on YouTube" alt="Jacob Fuller's YouTube Channel" target="_blank">
 				<img class="icon-light" src="/images/social-media/youtubeofflogo.png" />
 				<img class="icon-dark" src="/images/social-media/youtubelogo2005jacob.png" />
 			</a>
-			<a class="link-card" href="https://www.x.com/mariojacob7red" title="X - @Mariojacob7red">
+			
+			<!-- X -->
+			<a class="link-card" href="https://www.x.com/mariojacob7red" title="X - @Mariojacob7red" alt="Jacob Fuller's X Account" target="_blank">
 				<img class="icon-light" src="images/social-media/XLogo.png" />
 				<img class="icon-dark" src="/images/social-media/XLogo-white.png" />
 			</a>
-			<a class="link-card" href="https://www.linkedin.com/in/jacobfuller7/" title="Jacob Fuller on LinkedIn">
+
+			<!-- LinkedIn -->
+			<a class="link-card" href="https://www.linkedin.com/in/jacobfuller7/" title="Jacob Fuller on LinkedIn" alt="Jacob Fuller on LinkedIn" target="_blank">
 				<img class="icon-light" src="images/social-media/Logo_Linkedin.png" />
 				<img class="icon-dark" src="images/social-media/Logo_Linkedin.png" />
 			</a>
-			<a class="link-card" href="https://www.planetminecraft.com/member/mariojacob7red/" title="Mariojacob7red on Planet Minecraft">
+
+			<!-- Planet Minecraft -->
+			<a class="link-card" href="https://www.planetminecraft.com/member/mariojacob7red/" title="Mariojacob7red on Planet Minecraft" alt="Jacob Fuller on Planet Minecraft" target="_blank">
 				<img class="icon-light" src="images/PlanetMinecraft.png" />
 				<img class="icon-dark" src="images/PlanetMinecraft.png" />
 			</a>

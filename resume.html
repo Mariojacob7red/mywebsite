@@ -31,6 +31,32 @@
 	<link rel="manifest" href="/manifest.webmanifest">
 	<meta name="theme-color" content="#26344D">
 	<style>
+		/* #region Scrollbar */
+		/* ----- Firefox ----- */
+		html
+		{
+			scrollbar-width: auto;
+			/* Colors: thumb color, track color */
+			scrollbar-color: var(--brick) var(--cream-dim);
+		}
+
+		/* ----- Brave ----- */
+		::-webkit-scrollbar
+		{
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+			background: var(--brick);
+		}
+
+		::-webkit-scrollbar-track
+		{
+			background: var(--cream-dim);
+		}
+		/* #endregion Scrollbar */
+
 		:root
 		{
 			/* -- Colors -- */
@@ -48,10 +74,13 @@
 			--charcoal: #2B2320;
 			--charcoal__nochange: #2B2320;
 			--cream: #FAF3E6;
+			--cream__nav: #FAF3E6;
 			--cream__toggle: #1B2537;
 			--cream-dim: #F1E6D2;
 			--cream-dim__toggle: #3A4C6D;
 			--gold: #E8A93D;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #FAF3E6;
 			--navy: #26344D;
 			--navy-dim: #1B2537;
 			--radius-lg: 20px;
@@ -70,9 +99,12 @@
 			--charcoal: #F1E6D2;
 			--charcoal__nochange: #2B2320;
 			--cream: #1B2537;
+			--cream__nav: #FAF3E6;
 			--cream__toggle: #FAF3E6;
 			--cream-dim: #3A4C6D;
 			--cream-dim__toggle: #F1E6D2;
+			--nav-active-hover-text: #1B2537;
+			--nav-hover-text: #1B2537;
 			--tag-bg: #1B2537;
 			--tag-text: #F1E6D2;
 		}
@@ -146,6 +178,11 @@
 			border-bottom: 1px solid #3A3A3A;
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+
+		.pdf-shortcuts-hint
+		{
+			display: none;
 		}
 
 		.page-btns
@@ -222,6 +259,16 @@
 			align-content: center;
 		}
 
+		#zoom-level
+		{
+			color: #DDDDDD;
+			font-size: 13px;
+			font-variant-numeric: tabular-nums;
+			min-width: 44px;
+			text-align: center;
+			align-content: center;
+		}
+
 		.toolbar-spacer
 		{
 			display: none;
@@ -279,6 +326,12 @@
 			{
 				font-size: 14px;
 				min-width: 60px;
+			}
+
+			#zoom-level
+			{
+				font-size: 14px;
+				min-width: 48px;
 			}
 
 			.pdf-canvas-wrapper
@@ -347,15 +400,22 @@
 				nav a.active
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--cream__nav);
 				}
 
 				nav a:hover,
 				nav a:focus-visible
 				{
 					background: var(--brick);
-					color: var(--cream);
+					color: var(--nav-hover-text);
 					outline: none;
+				}
+
+				nav a.active:hover,
+				nav a.active:focus-visible
+				{
+					background: var(--brick);
+					color: var(--nav-active-hover-text);
 				}
 
 		.nav-spacer
@@ -889,6 +949,16 @@
 					font-size: 0.8rem;
 				}
 
+			.pdf-shortcuts-hint
+			{
+				display: block;
+				text-align: center;
+				padding: 4px 16px 8px;
+				background: #222222;
+				color: #888888;
+				font-size: 12px;
+			}
+
 			footer
 			{
 				padding: 26px 6% 40px;
@@ -998,21 +1068,22 @@
 			<!-- Toolbar -->
 			<div class="pdf-toolbar">
 				<div class="page-btns">
-					<button id="prev-page" class="pdf-btn">‹ Prev</button>
+					<button id="prev-page" class="pdf-btn" title="Previous page (←)">‹ Prev</button>
 
 					<span id="page-info">
 						<span id="page-num">1</span> / <span id="page-count">?</span>
 					</span>
 
-					<button id="next-page" class="pdf-btn">Next ›</button>
+					<button id="next-page" class="pdf-btn" title="Next page (→)">Next ›</button>
 				</div>
 
 				<div class="toolbar-spacer"></div>
 
 				<div class="page-size">
-					<button id="zoom-out" class="pdf-btn">−</button>
+					<button id="zoom-out" class="pdf-btn" title="Zoom out (−)">−</button>
 					<button id="fit-width" class="pdf-btn fit-btn">Fit</button>
-					<button id="zoom-in" class="pdf-btn">+</button>
+					<button id="zoom-in" class="pdf-btn" title="Zoom in (+)">+</button>
+					<span id="zoom-level">100%</span>
 				</div>
 
 				<div class="toolbar-spacer"></div>
@@ -1021,6 +1092,7 @@
 					↓ Download
 				</a>
 			</div>
+			<div class="pdf-shortcuts-hint">Keyboard: Change Page: (<i class="fa-solid fa-arrow-left fa-wag"></i>) (<i class="fa-solid fa-arrow-right fa-wag"></i>) • Zoom: (<i class="fa-solid fa-plus fa-beat"></i>) (<i class="fa-solid fa-minus fa-beat"></i>)</div>
 
 			<!-- Canvas Area -->
 			<div class="pdf-canvas-wrapper">
@@ -1082,6 +1154,7 @@
 					}).promise;
 
 					document.getElementById('page-num').textContent = num;
+					document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
 					// Update button states
 					document.getElementById('prev-page').disabled = num <= 1;
 					document.getElementById('next-page').disabled = num >= pdfDoc.numPages;
