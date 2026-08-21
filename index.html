@@ -1,340 +1,1313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Jacob Fuller</title>
-<meta charset="utf-8">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon144.png" type="image/png">
-<link rel="icon" href="favicon192.png" type="image/png">
-<link rel="icon" href="faviconbigger.png" type="image/png">
-<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167x167.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png">
-<link href="home.css" rel="stylesheet" media="only screen and (min-width: 1080px)">
-<link href="home1080.css" rel="stylesheet" media="only screen and (min-width: 1440px)">
-<link href="homemobile.css" rel="stylesheet" media="only screen and (max-width: 1080px)">
-<meta name="viewport" content="width=device-width">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web=app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Jacob Fuller">
-<link rel="manifest" href="/manifest.webmanifest">
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="Welcome to Jacob Fuller's website portfolio! If there's anything you'd like to more about him, then this is the right place!">
-<meta name="keywords" content="jacob, jacob fuller, mariojacob7red, southwest baptist university, sbu, digital marketing, youtube, graphic design, computer science">
-
-<script>
-	if (navigator && navigator.serviceWorker)
-	{
-		navigator.serviceWorker.register('sw.js');
-	}
-</script>
-
-<!-- ▼ Detects if the website is running on a Desktop or Mobile device. ▼ -->
-<!--<script>
-	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-	var element = document.getElementById('');
-</script>-->
-<!-- ▲ Detects if the website is running on a Desktop or Mobile device. ▲ -->
-
-<script type="text/javascript">
-window.onload = function()
-{
-	document.getElementById('mainfade').style.opacity = '1';
-	document.getElementById('divfade').style.opacity = '1';
-	document.getElementById('extraline').style.opacity = '1';
-	document.getElementById('slider').style.opacity = '1';
-	responsiveSlider();
-}
-</script>
-
-</head>
-
-<span id="navbutton" style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776;</span>
-
-<script>
-function openNav()
-{
-	document.getElementById("thesidenav").style.width = "250px";
-	/**document.body.style.backgroundColor = "rgba(0,0,0,0.4)";**/
-	document.getElementById("overlay").style.color = "#0000008a";
-}
-
-function closeNav()
-{
-	document.getElementById("thesidenav").style.width = "0px";
-	/**document.body.style.backgroundColor = "white";**/
-	document.getElementById("overlay").style.display = "block";
-}
-</script>
-
-<div id="thesidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="index.html">Home</a>
-		<a href="resume.html">Resume</a>
-		<a href="about.html">About</a>
-		<a href="portfolio.html">Portfolio</a>
-		<a href="contact.html">Contact</a>
-	<center><p style="margin: 30px auto 5px auto;">Links</p></center>
-	<div class="sidenavlinkicons" style="grid-template-columns: 1fr 50px 95px; grid-template-rows: 1fr;">
-	
-		<!-- YouTube Icon -->
-		<a href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" target="_blank" style="padding: unset; margin: 10px auto 5px auto; grid-row: 1/2; grid-column: 1/2;"><img src="images/youtubeofflogo.png" width="62" height="25" id="Youtube" alt="Subscribe to Mariojacob7red on YouTube" Title="Mariojacob7red on YouTube"/></a>
-		
-		<!-- Twitter Icon -->
-		<a href="https://twitter.com/mariojacob7red?ref_src=twsrc%5Etfw" target="_blank" style="padding: unset; margin: 10px auto 5px auto; grid-row: 1/2;grid-column: 2/3;"><img src="images/XLogo.png" width="25" height="25" id="Twitter" alt="Mariojacob7red on X" Title="@Mariojacob7red - X"/></a>
-		
-		<!-- LinkedIn -->
-		<a href="https://www.linkedin.com/in/jacobfuller7/" target="_blank" style="padding: unset; margin: 10px auto 5px auto; grid-row: 1/2; grid-column: 3/4;"><img src="images/Logo_Linkedin.png" width="22px" height="22px" alt="Jacob Fuller on LinkedIn" Title="Jacob Fuller on LinkedIn" style="margin-bottom: 2px;"/></a>
-		
-		<!-- Instagram -->
-		<!--<a href="https://www.instagram.com/Realmariojacob7red" target="_blank" style="padding: unset; margin: 10px auto 5px auto; grid-row: 2/3; grid-column: 1/2;"><img src="images/Instagram.png" width="25px" height="25px" alt="Realmariojacob7red on Instagram" Title="Realmariojacob7red on Instagram"/></a>-->
-		
-		<!-- Planet Minecraft -->
-		<!-- If I add Instagram back: grid-row: 2/3; grid-column: 2/3; -->
-		<!-- Old Margin: margin: 10px auto 5px auto; -->
-		<a href="https://www.planetminecraft.com/member/mariojacob7red/" target="_blank" style="padding: unset; margin: 10px auto 7px auto; grid-row: 2/3; grid-column: 1/2;"><img src="images/PlanetMinecraft.png" width="25px" height="25px" alt="Mariojacob7red on Planet Minecraft" Title="Mariojacob7red on Planet Minecraft"/></a>
-		
-		<!-- DeviantArt -->
-		<!-- Old Margin: None; Old Padding: None; -->
-		<a href="https://www.deviantart.com/mariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF); padding: unset; margin: auto auto auto auto; grid-row: 2/3; grid-column: 3/4;"><img src="images/DeviantArt_Logo_smaller.png" width="25px" height="25px" alt="Mariojacob7red on DeviantArt" Title="Mariojacob7red on DeviantArt"/></a>
-	</div>
-</div>
-
-<div id="overlay">
-<!--<button class="add-button">Add to home screen</button>-->
-<body>
-<!--<div id="wrapper">-->
-  <header style="display: grid;"> <!-- Search element - page 428 -->
-    <h1 style="grid-row: 1/2; grid-column: 1/2;">Jacob Fuller</h1>
-	
-	<div id="Homelogo">
-		<a href="index.html"><img src="images/seniorpicture_(cropped_10).jpg" alt="Home" Title="Home"/></a>
-	</div> <!-- I found that if I add 'Title=""' in a picture, it will display whatever text I want when a mouse hovers over it. So, I added the title part to some other elements on my website. -->
-	
-	<div id="links-container">
-		<div class="centered">
-			<div id="links">
-				<a href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" target="_blank" style="filter: drop-shadow(0px 0px 4px #FFFFFF);"><img src="images/youtubeofflogo.png" width="62" height="25" id="Youtube" alt="Subscribe to Mariojacob7red on YouTube" Title="Mariojacob7red on YouTube"/></a><!-- YouTube Icon -->
-			
-				<a href="https://twitter.com/mariojacob7red?ref_src=twsrc%5Etfw" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/XLogo.png" width="25" height="25" id="Twitter" alt="Mariojacob7red on X" Title="@Mariojacob7red - X"/></a> <!-- Twitter Icon -->
-				
-				<a href="https://www.linkedin.com/in/jacobfuller7/" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/Logo_Linkedin.png" width="22px" height="22px" alt="Jacob Fuller on LinkedIn" Title="Jacob Fuller on LinkedIn" style="margin-bottom: 2px;"/></a><!-- LinkedIn Icon -->
-				
-				<!--<a href="https://www.instagram.com/Realmariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/Instagram.png" width="25px" height="25px" alt="Realmariojacob7red on Instagram" Title="Realmariojacob7red on Instagram"/></a><!-- Instagram Icon -->
-				
-				<a href="https://www.planetminecraft.com/member/mariojacob7red/" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/PlanetMinecraft.png" width="25px" height="25px" alt="Mariojacob7red on Planet Minecraft" Title="Mariojacob7red on Planet Minecraft"/></a><!-- Planet Minecraft Icon -->
-				
-				<a href="https://www.deviantart.com/mariojacob7red" target="_blank" style="filter: drop-shadow(0px 0px 5px #FFFFFF);"><img src="images/DeviantArt_Logo_smaller.png" width="25px" height="25px" alt="Mariojacob7red on DeviantArt" Title="Mariojacob7red on DeviantArt"/></a><!-- DeviantArt Icon -->
-			</div>
-		</div>
-	</div>
-	
-  </header>
-  <nav id="navid">
-    <ul>
-		<li class="dropdown">
-			<a href="index.html" class="dropbutton">Home <i class="arrow down"></i></a>
-			<div class="dropdown-content">
-				<a href="resume.html">Resume</a>
-			</div>
-		</li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="portfolio.html">Portfolio</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul> 
-  </nav>
-  
-  <main id="mainfade">
-	<div class="aligncontentcenter">
-		<img src="images/Seniorpicture.jpg" id="HomePhoto" width="400px"/>
-	</div>
-  
-  <p id="textcolor">Hi everyone! My name is Jacob Fuller! I graduated from Southwest Baptist University in Bolivar, Missouri in May of 2022.</p>
-  <!--<p id="textcolor">I have a bachelor's degree in Digital Marketing and a minor in Computer Science. Though that may be what I got my degree in, I have a passion for Web Design and Graphic Design!</p>-->
-  <p id="textcolor">Digital Marketing with Computer Science minor. I have a passion for Web Design and Graphic Design!</p>
-  
-  <br class="mobilebr">
-  <div class="horizontalline"></div>
-  </main>
-  
-  <div id="divfade">
-	<div class="gridtemplate">
-		<div class="gridformat">
-			<!-- 1080+ PCs -->
-			<a href="images/luigismansiondarkmoon.jpg" target="_blank" title="Luigi's Mansion 2 Custom Boxart" id="biggerpiconly"/><img src="images/luigismansiondarkmoon.jpg" id="1stpic" style="width: 720px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-			<!-- 1080- PCs -->
-			<a href="images/luigismansiondarkmoon.jpg" target="_blank" title="Luigi's Mansion 2 Custom Boxart" id="smallerpiconly"/><img src="images/luigismansiondarkmoon.jpg" id="1stpic" style="width: 650px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-			<!-- Mobile -->
-			<a href="images/luigismansiondarkmoon.jpg" target="_blank" title="Luigi's Mansion 2 Custom Boxart" id="mobilepiconly"/><img src="images/luigismansiondarkmoon.jpg" id="1stpic" style="width: 300px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-		</div>
-		<div class="textformat">
-			<p>This is my custom boxart for the <b>Luigi's Mansion 2</b> game I own on my Nintendo Switch. Not only is it too crowded, but I believe it deserves the respect to be called by it's original name from the Nintendo 3DS: Luigi's Mansion: Dark Moon.</p>
-		</div>
-		
-		<div class="horizontalline"></div>
-		<br class="mobilebr">
-		
-		<div class="gridformat">
-			<!-- 1080+ PCs -->
-			<a href="images/princesspeachshowtime.jpg" target="_blank" title="Princess Peach Showtime! Custom Boxart" id="biggerpiconly"/><img src="images/princesspeachshowtime.jpg" style="width: 720px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-			<!-- 1080- PCs -->
-			<a href="images/princesspeachshowtime.jpg" target="_blank" title="Princess Peach Showtime! Custom Boxart" id="smallerpiconly"/><img src="images/princesspeachshowtime.jpg" style="width: 650px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-			<!-- Mobile -->
-			<a href="images/princesspeachshowtime.jpg" target="_blank" title="Princess Peach Showtime! Custom Boxart" id="mobilepiconly"/><img src="images/princesspeachshowtime.jpg" style="width: 300px; box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);"/></a>
-		</div>
-		<div class="textformat">
-			<p>My custom boxart for <b>Princess Peach Showtime!</b> I definitely love the idea Nintendo had to show Peach with different expressions, but I enjoy seeing her with her everyday smile on the front cover, so I tried to replicate the front and back as close as I could from scratch with the promotional art that had her smile on it.</p>
-		</div>
-		
-		<div class="horizontalline"></div>
-		<br class="mobilebr">
-		
-		<div class="gridformat">
-			<!--<img src="images/youtube_video_missing.png" id="3rdpic"/>-->
-			<div id="slider">
-				<ul id="slideWrap">
-					<!-- Ex. <li><a href="" target="_blank" title=""/><img src=""/></a></li> -->
-					<li><a href="images/storymode/storymodeep1.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 1"/><img src="images/storymode/storymodeep1.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep2.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 2"/><img src="images/storymode/storymodeep2.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep3.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 3"/><img src="images/storymode/storymodeep3.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep4.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 4"/><img src="images/storymode/storymodeep4.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep5.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 5"/><img src="images/storymode/storymodeep5.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep6.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 6"/><img src="images/storymode/storymodeep6.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep7.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 7"/><img src="images/storymode/storymodeep7.jpg"/></a></li>
-					<li><a href="images/storymode/storymodeep8.jpg" target="_blank" title="Minecraft Story Mode: Season 1 - Episode 8"/><img src="images/storymode/storymodeep8.jpg"/></a></li>
-					<li><a href="images/storymode/storymodes2ep1.jpg" target="_blank" title="Minecraft Story Mode: Season 2 - Episode 1"/><img src="images/storymode/storymodes2ep1.jpg"/></a></li>
-					<li><a href="images/storymode/storymodes2ep2.jpg" target="_blank" title="Minecraft Story Mode: Season 2 - Episode 2"/><img src="images/storymode/storymodes2ep2.jpg"/></a></li>
-					<li><a href="images/storymode/storymodes2ep3.jpg" target="_blank" title="Minecraft Story Mode: Season 2 - Episode 3"/><img src="images/storymode/storymodes2ep3.jpg"/></a></li>
-					<li><a href="images/storymode/storymodes2ep4.jpg" target="_blank" title="Minecraft Story Mode: Season 2 - Episode 4"/><img src="images/storymode/storymodes2ep4.jpg"/></a></li>
-					<li><a href="images/storymode/storymodes2ep5.jpg" target="_blank" title="Minecraft Story Mode: Season 2 - Episode 5"/><img src="images/storymode/storymodes2ep5.jpg"/></a></li>
-				</ul>
-				
-				<p id="prev">◄</p> <!-- "&#9668;" is the code to get it. -->
-				<p id="next">►</p> <!-- "&#9658;" is the code to get it. -->
-			</div>
-		</div>
-		
-		<div class="textformat">
-			<p>Around halfway through June 2024, I started to teach myself how to use Blender more for a series I was uploading to YouTube called <b>Minecraft Story Mode</b>. In place of the characters from the game, I used my character skin and my friends skins too. I started each of these from scratch and I know I'm getting better each time I make a new one! :D</p>
-		</div>
-	</div>
-	<div id="extraline">
-		<p id="exlitext">
-		<br>
-		If you want to see more projects I've worked on, check out my <a href="portfolio.html">Portfolio</a> page! :D
-		<br>
-		<br>
-		</p>
-	</div>
-	</div>
-  <footer>Copyright &copy; Jacob Fuller 2025</footer>
-  <!--</div>--> <!-- end of wrapper -->
-  
-  <!-- ▼ Adds animation and functionality to the automatic scrolling images. ▼ -->
-		<script>
-			var responsiveSlider = function()
-			{
-				var slider = document.getElementById("slider");
-				var sliderWidth = slider.offsetWidth;
-				var slideList = document.getElementById("slideWrap");
-				var count = 1;
-				var items = slideList.querySelectorAll("li").length;
-				var prev = document.getElementById("prev");
-				var next = document.getElementById("next");
-				
-				window.addEventListener('resize', function()
-				{
-					sliderWidth = slider.offsetWidth;
-				});
-				
-				var prevSlide = function()
-				{
-					if(count > 1)
-					{
-						count = count - 2;
-						slideList.style.left = "-" + count * sliderWidth + "px";
-						count++;
-					}
-					else if(count = 1)
-					{
-						count = items - 1;
-						slideList.style.left = "-" + count * sliderWidth + "px";
-						count++;
-					}
-				};
-				
-				var nextSlide = function()
-				{
-					if(count < items)
-					{
-						slideList.style.left = "-" + count * sliderWidth + "px";
-						count++;
-					}
-					else if(count = items)
-					{
-						slideList.style.left = "0px";
-						count = 1;
-					}
-				};
-				
-				next.addEventListener("click", function()
-				{
-					nextSlide();
-				});
-				
-				prev.addEventListener("click", function()
-				{
-					prevSlide();
-				});
-				
-				setInterval(function()
-				{
-					nextSlide()
-				}, 7000);
-			};
-			
-			/**window.onload = function()
-			{
-				responsiveSlider();
-			}**/
-		</script>
-		<!-- (Within the "setInterval" area, where the number is, that's where you can set how long of a wait it will be before the slider advances to the next image you have. Ex. 10000 = 10 seconds.) -->
-  
-  <!-- ▼ Scroll to top Button ▼ -->
-	<button onclick="topFunction()" id="scrollbutton" title="Go to top">&#9650;</button>
-	
+	<script src="https://kit.fontawesome.com/3d46af8a9d.js" crossorigin="anonymous"></script>
 	<script>
-	// Get the button
-	let topbutton = document.getElementById("scrollbutton");
-
-	// When the user scrolls down 20px from the top of the document, show the button.
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction()
-	{
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+		(function ()
 		{
-			topbutton.style.display = "block";
-		}
-			else
-		{
-			topbutton.style.display = "none";
-		}
-	}
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme === 'dark')
+			{
+				document.documentElement.setAttribute('data-theme', 'dark');
+			}
+		})();
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Jacob Fuller">
+	<title>Jacob Fuller — Home</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon144.png" type="image/png">
+	<link rel="icon" href="favicon192.png" type="image/png">
+	<link rel="icon" href="faviconbigger.png" type="image/png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png">
+	<link rel="manifest" href="/manifest.webmanifest">
+	<meta name="theme-color" content="#26344D">
 
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction()
-	{
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Welcome to Jacob Fuller's website portfolio! If there's anything you'd like to know more about him, then this is the right place!">
+	<meta name="keywords" content="jacob, jacob fuller, mariojacob7red, southwest baptist university, sbu, digital marketing, youtube, graphic design, computer science">
+
+	<style>
+		:root
+		{
+			/* Colors */
+			--band-bg: #26344D;
+			--band-text: #FAF3E6;
+			--brick: #D6493F;
+			--brick-dark: #B93A31;
+			--card-shadow: 0px 8px 24px rgba(43, 35, 32, 0.12), 0px 2px 6px rgba(43, 35, 32, 0.08);
+			--charcoal: #2B2320;
+			--charcoal__nochange: #2B2320;
+			--cream: #FAF3E6;
+			--cream__portfolio: #FAF3E6;
+			--cream__toggle: #1B2537;
+			--cream-dim: #F1E6D2;
+			--cream-dim__toggle: #3A4C6D;
+			--gold: #E8A93D;
+			--navy: #26344D;
+			--navy-dim: #1B2537;
+			--radius-lg: 20px;
+			--radius-md: 14px;
+			--radius-sm: 10px;
+			--white: #FFFFFF;
+			/* Sizes */
+			--toggle-size: 40px;
+		}
+
+		[data-theme="dark"]
+		{
+			--band-bg: #3A4C6D;
+			--band-text: #F1E6D2;
+			--charcoal: #F1E6D2;
+			--charcoal__nochange: #2B2320;
+			--cream: #1B2537;
+			--cream__portfolio: #FAF3E6;
+			--cream__toggle: #FAF3E6;
+			--cream-dim: #3A4C6D;
+			--cream-dim__toggle: #F1E6D2;
+		}
+
+			[data-theme="dark"] .icon-light
+			{
+				display: none;
+			}
+
+			[data-theme="dark"] .icon-dark
+			{
+				display: block;
+			}
+
+		.icon-light, .icon-dark
+		{
+			height: 40px;
+		}
+
+		.icon-dark
+		{
+			display: none;
+		}
+
+		/* #region Scroll to Top */
+		#scrollTopButton
+		{
+			position: fixed;
+			bottom: 16px;
+			right: 16px;
+			border: none;
+			background: var(--cream-dim__toggle);
+			color: var(--cream);
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: var(--card-shadow);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(10px);
+			transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+			z-index: 100;
+		}
+
+			#scrollTopButton.is-visible
+			{
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0px);
+			}
+
+			#scrollTopButton:hover
+			{
+				transform: translateY(-3px);
+			}
+
+			#scrollTopButton:focus-visible
+			{
+				outline: 3px solid var(--gold);
+			}
+		/* #endregion Scroll to Top */
+
+		*
+		{
+			box-sizing: border-box;
+		}
+
+		body
+		{
+			margin: 0px;
+			background: var(--cream);
+			color: var(--charcoal);
+			font-family: 'Inter', sans-serif;
+			transition: background 0.3s ease, color 0.3s ease;
+			font-size: 15px;
+			line-height: 1.5;
+		}
+
+		h1, h2, h3, .brand
+		{
+			font-family: 'Baloo 2', sans-serif;
+		}
+
+		/* ========== BASE (mobile-first) ========== */
+		header
+		{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 12px 4%;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.brand
+		{
+			font-size: 1.25rem;
+			font-weight: 800;
+			color: var(--brick);
+		}
+
+		nav
+		{
+			display: flex;
+			gap: 4px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+			nav a
+			{
+				text-decoration: none;
+				color: var(--charcoal);
+				font-weight: 600;
+				font-size: 0.82rem;
+				padding: 10px 14px;
+				border-radius: 999px;
+				transition: background 0.2s ease, color 0.2s ease;
+			}
+
+				nav a.active
+				{
+					background: var(--brick);
+					color: var(--cream);
+				}
+
+				nav a:hover,
+				nav a:focus-visible
+				{
+					background: var(--brick);
+					color: var(--cream);
+					outline: none;
+				}
+
+		.nav-spacer
+		{
+			display: inline-block;
+			width: var(--toggle-size);
+			height: var(--toggle-size);
+			flex-shrink: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		.theme-toggle
+		{
+			border: none;
+			background: var(--cream-dim__toggle);
+			color: var(--cream__toggle);
+			width: var(--toggle-size);
+			height: var(--toggle-size);
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 0.95rem;
+			align-items: center;
+			justify-content: center;
+			box-shadow: var(--card-shadow);
+		}
+
+			.theme-toggle:focus-visible
+			{
+				outline: 3px solid var(--gold);
+			}
+
+		.themeToggle__mobile
+		{
+			display: flex;
+			position: absolute;
+			top: 12px;
+			right: 4%;
+		}
+
+		.themeToggle__desktop
+		{
+			display: none;
+		}
+
+		.hero
+		{
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			padding: 24px 4% 40px;
+			flex-wrap: wrap-reverse;
+		}
+
+		.hero-text
+		{
+			flex: 1 1 260px;
+		}
+
+		.eyebrow
+		{
+			display: inline-block;
+			background: var(--gold);
+			color: var(--charcoal__nochange);
+			font-weight: 700;
+			font-size: 0.68rem;
+			letter-spacing: 0.06em;
+			padding: 5px 12px;
+			border-radius: 999px;
+			margin-bottom: 12px;
+		}
+
+		.hero h1
+		{
+			font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+			line-height: 1.15;
+			margin: 0px 0px 12px;
+		}
+
+			.hero h1 span
+			{
+				color: var(--brick);
+			}
+
+		.hero p
+		{
+			font-size: 0.95rem;
+			line-height: 1.55;
+			max-width: 100%;
+			margin: 0px 0px 20px;
+			color: var(--charcoal);
+			opacity: 0.85;
+		}
+
+		.btn-row
+		{
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.btn
+		{
+			padding: 11px 20px;
+			border-radius: var(--radius-sm);
+			font-weight: 600;
+			text-decoration: none;
+			font-size: 0.88rem;
+			box-shadow: var(--card-shadow);
+			transition: transform 0.15s ease;
+			display: inline-block;
+		}
+
+			.btn:hover
+			{
+				transform: translateY(-2px);
+			}
+
+		.btn-primary
+		{
+			background: var(--brick);
+			color: var(--cream__portfolio);
+		}
+
+		.btn-secondary
+		{
+			background: var(--cream-dim);
+			color: var(--charcoal);
+		}
+
+		.hero-portrait
+		{
+			flex: 0 0 120px;
+			width: 120px;
+			border-radius: var(--radius-lg);
+			overflow: hidden;
+			box-shadow: var(--card-shadow);
+			border: 4px solid var(--cream-dim);
+			margin: 0px auto;
+		}
+
+			.hero-portrait img
+			{
+				width: 100%;
+				object-fit: contain;
+				display: block;
+			}
+
+		section
+		{
+			padding: 8px 4% 32px;
+		}
+
+		.section-head
+		{
+			margin-bottom: 16px;
+		}
+
+			.section-head h2
+			{
+				font-size: 1.25rem;
+				margin: 0px 0px 4px;
+			}
+
+			.section-head p
+			{
+				margin: 0px;
+				opacity: 0.75;
+				font-size: 0.88rem;
+			}
+
+		.links-grid
+		{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			gap: 12px;
+		}
+
+		.link-card
+		{
+			background: var(--cream-dim);
+			border-radius: var(--radius-md);
+			padding: 16px;
+			text-align: center;
+			text-decoration: none;
+			color: var(--charcoal);
+			box-shadow: var(--card-shadow);
+			transition: transform 0.15s ease;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+			perspective: 200px;
+		}
+
+			.link-card:hover
+			{
+				transform: translateY(-4px);
+			}
+
+			.link-card .dot
+			{
+				width: 52px;
+				height: 52px;
+				border-radius: 50%;
+				background: var(--white);
+				color: var(--cream);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+			}
+
+			.link-card span
+			{
+				font-weight: 600;
+				font-size: 0.8rem;
+			}
+
+			.link-card img
+			{
+				transition: transform 0.75s ease;
+			}
+
+			.link-card:hover img
+			{
+				transform: rotateY(360deg);
+			}
+
+		.shelf
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.cart-card
+		{
+			background: var(--cream-dim);
+			border-radius: var(--radius-lg);
+			overflow: hidden;
+			box-shadow: var(--card-shadow);
+			transition: transform 0.15s ease;
+		}
+
+			.cart-card:hover
+			{
+				transform: translateY(-4px) rotate(-0.4deg);
+			}
+
+			.cart-card img
+			{
+				width: 100%;
+				height: 230px;
+				object-fit: cover;
+				display: block;
+				transition: height 0.7s ease;
+			}
+
+			.cart-card .cart-label
+			{
+				padding: 14px 16px;
+			}
+
+				.cart-card .cart-label h3
+				{
+					margin: 0px 0px 4px;
+					font-size: 1.1rem;
+				}
+
+				.cart-card .cart-label p
+				{
+					margin: 0px;
+					font-size: 0.86rem;
+					opacity: 0.75;
+					line-height: 1.4;
+				}
+
+		/* #region Carousel */
+		.carousel
+		{
+			position: relative;
+			overflow: hidden;
+			box-shadow: var(--card-shadow);
+			outline: none;
+		}
+
+			.carousel:focus-visible
+			{
+				outline: 3px solid var(--gold);
+				outline-offset: 3px;
+			}
+
+		.carousel-track
+		{
+			display: flex;
+			transition: transform 0.4s ease;
+		}
+
+			.carousel-track > *
+			{
+				flex: 0 0 100%;
+				min-width: 0px;
+			}
+
+			.carousel-track img
+			{
+				width: 100%;
+				display: block;
+			}
+
+		.carousel-btn
+		{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border: none;
+			background: var(--cream-dim);
+			color: var(--cream__toggle);
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 1.1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: var(--card-shadow);
+		}
+
+			.carousel-btn.prev
+			{
+				left: 10px;
+			}
+
+			.carousel-btn.next
+			{
+				right: 10px;
+			}
+
+			.carousel-btn:focus-visible
+			{
+				outline: 3px solid var(--gold);
+			}
+
+		.carousel-dots
+		{
+			position: absolute;
+			bottom: 12px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 7px;
+		}
+
+		.carousel-dot
+		{
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			border: none;
+			background: rgba(255, 255, 255, 0.5);
+			cursor: pointer;
+			padding: 0px;
+		}
+
+			.carousel-dot.is-active
+			{
+				background: var(--white, #FFFFFF);
+				width: 18px;
+				border-radius: 999px;
+				transition: width 0.2s ease;
+			}
+		/* #endregion Carousel */
+
+		.cta-band
+		{
+			background: var(--band-bg);
+			color: var(--band-text);
+			border-radius: var(--radius-lg);
+			padding: 26px 4%;
+			margin: 0px 4% 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			gap: 14px;
+			box-shadow: var(--card-shadow);
+			transition: background 0.3s ease, color 0.3s ease;
+		}
+
+			.cta-band h2
+			{
+				margin: 0px 0px 6px;
+				font-size: 1.2rem;
+			}
+
+			.cta-band p
+			{
+				margin: 0px;
+				opacity: 0.85;
+				font-size: 0.88rem;
+			}
+
+			.cta-band .btn-primary
+			{
+				background: var(--gold);
+				color: var(--navy-dim);
+			}
+
+		footer
+		{
+			text-align: center;
+			padding: 20px 4% 32px;
+			font-size: 0.8rem;
+			opacity: 0.6;
+		}
+
+		@media (prefers-reduced-motion: reduce)
+		{
+			.btn, .link-card, .cart-card, .theme-toggle
+			{
+				transition: none;
+			}
+		}
+
+		/* ========== 305px ========== */
+		@media (min-width: 305px)
+		{
+			.link-card
+			{
+				padding: 18px;
+			}
+		}
+
+		/* ========== 353px ========== */
+		@media (min-width: 353px)
+		{
+			header
+			{
+				padding: 14px 4.5%;
+			}
+
+			.brand
+			{
+				font-size: 1.3rem;
+			}
+
+			nav a
+			{
+				font-size: 0.85rem;
+				padding: 9px 15px;
+			}
+
+			.themeToggle__mobile
+			{
+				top: 14px;
+				right: 4.5%;
+			}
+
+			.hero
+			{
+				padding: 28px 4.5% 44px;
+			}
+
+				.hero h1
+				{
+					font-size: clamp(1.8rem, 6vw, 2.5rem);
+				}
+
+			section
+			{
+				padding: 10px 4.5% 36px;
+			}
+
+			footer
+			{
+				padding: 22px 4.5% 34px;
+			}
+		}
+
+		/* ===== Min Width: 444px ===== */
+		@media (min-width: 444px)
+		{
+			.btn-row
+			{
+				justify-content: revert;
+			}
+		}
+
+		/* ========== 576px ========== */
+		@media (min-width: 576px)
+		{
+			:root
+			{
+				--radius-lg: 24px;
+				--radius-md: 16px;
+				--radius-sm: 11px;
+				--toggle-size: 38px;
+			}
+
+			.icon-light, .icon-dark
+			{
+				height: 46px;
+			}
+
+			#scrollTopButton
+			{
+				bottom: 20px;
+				right: 20px;
+				width: 42px;
+				height: 42px;
+			}
+
+			header
+			{
+				padding: 16px 5%;
+			}
+
+			nav
+			{
+				gap: 6px;
+			}
+
+				nav a
+				{
+					font-size: 0.88rem;
+					padding: 9px 17px;
+				}
+
+			.themeToggle__mobile
+			{
+				top: 16px;
+				right: 5%;
+			}
+
+			.hero
+			{
+				flex-direction: row;
+				align-items: center;
+				gap: 32px;
+				padding: 32px 5% 52px;
+			}
+
+			.hero-text
+			{
+				flex: 1 1 320px;
+			}
+
+			.hero h1
+			{
+				font-size: clamp(2rem, 5vw, 2.8rem);
+			}
+
+			.hero p
+			{
+				font-size: 1rem;
+				max-width: 46ch;
+			}
+
+			.hero-portrait
+			{
+				flex: 0 0 160px;
+				width: 160px;
+				margin: 0px;
+			}
+
+			section
+			{
+				padding: 10px 5% 44px;
+			}
+
+			.section-head h2
+			{
+				font-size: 1.4rem;
+			}
+
+			.shelf
+			{
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 20px;
+			}
+
+			.cart-card .cart-label h3
+			{
+				font-size: 1.2rem;
+			}
+
+			.carousel-btn
+			{
+				width: 40px;
+				height: 40px;
+				font-size: 1.2rem;
+			}
+
+			.cta-band
+			{
+				flex-direction: row;
+				text-align: left;
+				justify-content: space-between;
+				padding: 34px 5%;
+				margin: 0px 5% 44px;
+			}
+
+			footer
+			{
+				padding: 24px 5% 36px;
+			}
+		}
+
+		/* ========== 768px ========== */
+		@media (min-width: 768px)
+		{
+			body
+			{
+				font-size: 16px;
+			}
+
+			header
+			{
+				padding: 18px 5.5%;
+			}
+
+			.brand
+			{
+				font-size: 1.35rem;
+			}
+
+			nav a
+			{
+				font-size: 0.9rem;
+				padding: 9px 17px;
+			}
+
+			.nav-spacer
+			{
+				display: none;
+			}
+
+			.themeToggle__mobile
+			{
+				display: none;
+			}
+
+			.themeToggle__desktop
+			{
+				display: flex;
+			}
+
+			.hero
+			{
+				padding: 36px 5.5% 60px;
+				gap: 40px;
+			}
+
+				.hero h1
+				{
+					font-size: clamp(2.1rem, 4.2vw, 3rem);
+				}
+
+			.hero-portrait
+			{
+				flex: 0 0 190px;
+				width: 190px;
+			}
+
+			section
+			{
+				padding: 10px 5.5% 52px;
+			}
+
+			.links-grid
+			{
+				grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+			}
+
+			footer
+			{
+				padding: 24px 5.5% 38px;
+				font-size: 0.82rem;
+			}
+		}
+
+		/* ========== 992px ========== */
+		@media (min-width: 992px)
+		{
+			:root
+			{
+				--radius-lg: 28px;
+				--radius-md: 18px;
+				--radius-sm: 12px;
+				--toggle-size: 40px;
+			}
+
+			.icon-light, .icon-dark
+			{
+				height: 50px;
+			}
+
+			#scrollTopButton
+			{
+				bottom: 24px;
+				right: 24px;
+				width: 44px;
+				height: 44px;
+				font-size: 1.1rem;
+			}
+
+			header
+			{
+				padding: 20px 6%;
+			}
+
+			.brand
+			{
+				font-size: 1.4rem;
+			}
+
+			nav
+			{
+				gap: 8px;
+			}
+
+				nav a
+				{
+					font-size: 0.92rem;
+					padding: 9px 18px;
+				}
+
+			.theme-toggle
+			{
+				font-size: 1.05rem;
+			}
+
+			.hero
+			{
+				gap: 48px;
+				padding: 40px 6% 70px;
+			}
+
+			.hero-text
+			{
+				flex: 1 1 380px;
+			}
+
+			.eyebrow
+			{
+				font-size: 0.75rem;
+				padding: 6px 14px;
+				margin-bottom: 16px;
+			}
+
+			.hero h1
+			{
+				font-size: clamp(2.1rem, 4vw, 3.2rem);
+				margin: 0px 0px 14px;
+			}
+
+			.hero p
+			{
+				font-size: 1.05rem;
+				margin: 0px 0px 26px;
+				max-width: 100%;
+			}
+
+			.btn-row
+			{
+				gap: 14px;
+			}
+
+			.btn
+			{
+				padding: 13px 26px;
+				font-size: 0.95rem;
+			}
+
+			.hero-portrait
+			{
+				flex: 0 0 220px;
+				width: 220px;
+				border: 6px solid var(--cream-dim);
+			}
+
+			section
+			{
+				padding: 10px 6% 60px;
+			}
+
+			.section-head
+			{
+				margin-bottom: 26px;
+			}
+
+				.section-head h2
+				{
+					font-size: 1.6rem;
+					margin: 0px 0px 6px;
+				}
+
+				.section-head p
+				{
+					font-size: 0.95rem;
+				}
+
+			.links-grid
+			{
+				grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+				gap: 16px;
+			}
+
+			.link-card
+			{
+				padding: 20px;
+				gap: 10px;
+			}
+
+				.link-card .dot
+				{
+					width: 70px;
+					height: 70px;
+				}
+
+				.link-card span
+				{
+					font-size: 0.88rem;
+				}
+
+			.shelf
+			{
+				gap: 22px;
+			}
+
+			.cart-card .cart-label
+			{
+				padding: 16px 18px;
+			}
+
+				.cart-card .cart-label h3
+				{
+					font-size: 1.35rem;
+				}
+
+				.cart-card .cart-label p
+				{
+					font-size: 0.95rem;
+				}
+
+			.cart-card.one:hover img, .cart-card.two:hover img
+			{
+				height: 418px;
+			}
+
+			.cart-card.three:hover img
+			{
+				height: 291px;
+			}
+
+			.carousel-dots
+			{
+				bottom: 14px;
+				gap: 8px;
+			}
+
+			.carousel-dot
+			{
+				width: 8px;
+				height: 8px;
+			}
+
+				.carousel-dot.is-active
+				{
+					width: 20px;
+				}
+
+			.cta-band
+			{
+				padding: 44px 6%;
+				margin: 0px 6% 60px;
+				gap: 20px;
+			}
+
+				.cta-band h2
+				{
+					font-size: 1.4rem;
+				}
+
+				.cta-band p
+				{
+					font-size: 0.95rem;
+				}
+
+			footer
+			{
+				padding: 26px 6% 40px;
+				font-size: 0.85rem;
+			}
+		}
+
+		/* ========== 1400px ========== */
+		@media (min-width: 1400px)
+		{
+			header
+			{
+				padding: 22px 7%;
+			}
+
+			section
+			{
+				padding: 12px 7% 64px;
+			}
+
+			footer
+			{
+				padding: 28px 7% 44px;
+			}
+		}
+
+		/* ========== 1680px ========== */
+		@media (min-width: 1680px)
+		{
+			header
+			{
+				padding: 24px 8%;
+			}
+
+			section
+			{
+				padding: 14px 8% 68px;
+			}
+
+			footer
+			{
+				padding: 30px 8% 48px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html" style="text-decoration: none;">
+			<div class="brand">Jacob Fuller</div>
+		</a>
+		<nav>
+			<a href="#" class="active">Home</a>
+			<a href="resume.html">Resume</a>
+			<a href="about.html">About</a>
+			<a href="portfolio.html">Portfolio</a>
+			<a href="contact.html">Contact</a>
+			<span class="nav-spacer" aria-hidden="true"></span>
+			<button id="themeToggleDesktop" class="theme-toggle themeToggle__desktop" aria-label="Toggle dark mode">🌙</button>
+		</nav>
+		<button id="themeToggleMobile" class="theme-toggle themeToggle__mobile" aria-label="Toggle dark mode">🌙</button>
+	</header>
+
+	<section class="hero">
+		<div class="hero-text">
+			<span class="eyebrow">DIGITAL MARKETING · GRAPHIC &amp; WEB DESIGN</span>
+			<h1>Hi, I'm Jacob — I like to design (and code) things that feel <span>a little nostalgic</span>, on purpose.</h1>
+			<p>Southwest Baptist University grad (Digital Marketing, Computer Science minor) with a soft spot for retro design and a growing toolkit of modern web skills — including hands-on experience with Blazor and MudBlazor.</p>
+			<div class="btn-row">
+				<a href="portfolio.html" class="btn btn-primary">
+					<i class="fa-solid fa-user fa-jello"></i> View my portfolio
+				</a>
+				<a href="resume.html" class="btn btn-secondary">
+					<i class="fa-solid fa-arrow-down fa-float"></i> Download resume
+				</a>
+			</div>
+		</div>
+		<div class="hero-portrait">
+			<img src="images/SeniorPhoto2.jpg" alt="Jacob Fuller portrait">
+		</div>
+	</section>
+
+	<section>
+		<div class="section-head">
+			<h2>Find me around the web</h2>
+		</div>
+		<div class="links-grid">
+			<a class="link-card" href="https://www.youtube.com/c/Mariojacob7red?sub_confirmation=1" title="Mariojacob7red on YouTube">
+				<img class="icon-light" src="/images/social-media/youtubeofflogo.png" />
+				<img class="icon-dark" src="/images/social-media/youtubelogo2005jacob.png" />
+			</a>
+			<a class="link-card" href="https://www.x.com/mariojacob7red" title="X - @Mariojacob7red">
+				<img class="icon-light" src="images/social-media/XLogo.png" />
+				<img class="icon-dark" src="/images/social-media/XLogo-white.png" />
+			</a>
+			<a class="link-card" href="https://www.linkedin.com/in/jacobfuller7/" title="Jacob Fuller on LinkedIn">
+				<img class="icon-light" src="images/social-media/Logo_Linkedin.png" />
+				<img class="icon-dark" src="images/social-media/Logo_Linkedin.png" />
+			</a>
+			<a class="link-card" href="https://www.planetminecraft.com/member/mariojacob7red/" title="Mariojacob7red on Planet Minecraft">
+				<img class="icon-light" src="images/PlanetMinecraft.png" />
+				<img class="icon-dark" src="images/PlanetMinecraft.png" />
+			</a>
+		</div>
+	</section>
+
+	<section>
+		<div class="section-head">
+			<h2>From the shelf</h2>
+			<p>A few custom pieces — box art and character work, done from scratch.</p>
+		</div>
+		<div class="shelf">
+			<div class="cart-card one">
+				<a href="images/luigismansiondarkmoon.jpg">
+					<img src="images/luigismansiondarkmoon.jpg" alt="Luigi's Mansion 2 custom boxart">
+				</a>
+				<div class="cart-label">
+					<h3>Luigi's Mansion: Dark Moon</h3>
+					<p>Here is my custom box art for Luigi's Mansion 2! I found the official Switch cover a bit too cluttered, so I took it upon myself to redesign it. More importantly, I wanted to honor the game's true identity. Originally titled Luigi's Mansion: Dark Moon only in North America, it was known as Luigi's Mansion 2 everywhere else. It deserves to be called by its original, global name, so I replicated the artwork from scratch to restore that classic look.</p>
+				</div>
+			</div>
+			<div class="cart-card two">
+				<a href="images/princesspeachshowtime.jpg">
+					<img src="images/princesspeachshowtime.jpg" alt="Princess Peach Showtime custom boxart">
+				</a>
+				<div class="cart-label">
+					<h3>Princess Peach Showtime!</h3>
+					<p>This is my custom box art for Princess Peach: Showtime! While I love Nintendo's concept of showcasing Peach's various transformations, I wanted to highlight her classic, everyday smile on the cover. Using official promotional art as a reference, I recreated both the front and back covers from scratch to capture that iconic look.</p>
+				</div>
+			</div>
+			<div class="cart-card three">
+				<div class="carousel" data-carousel>
+					<div class="carousel-track" data-carousel-track>
+						<div><img src="images/storymode/storymodeep1.jpg" alt="Minecraft Story Mode Season 1 Episode 1"></div>
+						<div><img src="images/storymode/storymodeep2.jpg" alt="Minecraft Story Mode Season 1 Episode 2"></div>
+						<div><img src="images/storymode/storymodeep3.jpg" alt="Minecraft Story Mode Season 1 Episode 3"></div>
+						<div><img src="images/storymode/storymodeep4.jpg" alt="Minecraft Story Mode Season 1 Episode 4"></div>
+						<div><img src="images/storymode/storymodeep5.jpg" alt="Minecraft Story Mode Season 1 Episode 5"></div>
+						<div><img src="images/storymode/storymodeep6.jpg" alt="Minecraft Story Mode Season 1 Episode 6"></div>
+						<div><img src="images/storymode/storymodeep7.jpg" alt="Minecraft Story Mode Season 1 Episode 7"></div>
+						<div><img src="images/storymode/storymodeep8.jpg" alt="Minecraft Story Mode Season 1 Episode 8"></div>
+						<div><img src="images/storymode/storymodes2ep1.jpg" alt="Minecraft Story Mode Season 2 Episode 1"></div>
+						<div><img src="images/storymode/storymodes2ep2.jpg" alt="Minecraft Story Mode Season 2 Episode 2"></div>
+						<div><img src="images/storymode/storymodes2ep3.jpg" alt="Minecraft Story Mode Season 2 Episode 3"></div>
+						<div><img src="images/storymode/storymodes2ep4.jpg" alt="Minecraft Story Mode Season 2 Episode 4"></div>
+						<div><img src="images/storymode/storymodes2ep5.jpg" alt="Minecraft Story Mode Season 2 Episode 5"></div>
+					</div>
+					<button class="carousel-btn prev" data-carousel-prev aria-label="Previous slide"><i class="fa-solid fa-caret-left"></i></button>
+					<button class="carousel-btn next" data-carousel-next aria-label="Next slide"><i class="fa-solid fa-caret-right"></i></button>
+					<div class="carousel-dots" data-carousel-dots></div>
+				</div>
+				<div class="cart-label">
+					<h3>Minecraft: Story Mode</h3>
+					<p>In June 2024, I embarked on a self-directed learning journey in Blender to produce assets for my YouTube series, Minecraft: Story Mode. The project involved replacing standard game characters with custom 3D models based on personal and friend-derived skins. Each asset was modeled from the ground up, demonstrating a consistent trajectory of skill development and technical growth.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="cta-band">
+		<div>
+			<h2>Open to new opportunities</h2>
+			<p>Currently looking for digital marketing / web design roles — let's talk.</p>
+		</div>
+		<a href="contact.html" class="btn btn-primary">Get in touch</a>
+	</div>
+
+	<button id="scrollTopButton" title="Go to top" aria-label="Scroll to top">
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
+
+	<footer>Copyright © Jacob Fuller 2026</footer>
+
+	<script src="/js/carousel.js"></script>
+	<script src="/js/scrollTop.js"></script>
+	<script>
+		if ('serviceWorker' in navigator)
+		{
+			window.addEventListener('load', function ()
+			{
+				navigator.serviceWorker.register('/sw.js');
+			});
+		}
+	</script>
+	<script>
+		const toggles = document.querySelectorAll('.theme-toggle');
+		const isDarkNow = document.documentElement.getAttribute('data-theme') === 'dark';
+		toggles.forEach(function (toggle)
+		{
+			toggle.textContent = isDarkNow ? '☀️' : '🌙';
+		});
+
+		toggles.forEach(function (toggle)
+		{
+			toggle.addEventListener('click', () =>
+			{
+				const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+				const newTheme = isDark ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', newTheme);
+				toggles.forEach(function (t)
+				{
+					t.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+				});
+				localStorage.setItem('theme', newTheme);
+			});
+		});
 	</script>
 </body>
-</div>
-<!--div class="updatebanner">
-	<span class="closebutton" onclick="this.parentElement.style.display='none';">&times;</span>
-	This website has been updated. If you added this to your desktop, please uninstall, delete website data, and reinstall to see changes.
-</div>-->
 </html>

@@ -1,52 +1,54 @@
 // Core assets
 let coreAssets = [
-	'/home.css',
-	'/homemobile.css',
-	'/resume.css',
-	'/resumemobile.css',
-	'/about.css',
-	'/aboutmobile.css',
-	'/portfolio.css',
-	'/portfoliomobile.css',
-	'/contact.css',
-	'/contactmobile.css',
+	'/',
+	'/index.html',
+	'/about.html',
+	'/resume.html',
+	'/portfolio.html',
+	'/contact.html',
+	'/offline.html',
+	'/manifest.webmanifest',
+	'/js/carousel.js',
 	'/favicon.ico',
 	'/favicon144.png',
 	'/favicon192.png',
-	'/faviconbigger.png',
-	'/images/RZR_Space_3840x2160.png'
+	'/faviconbigger.png'
 ];
 
 // On install, cache core assets
 self.addEventListener('install', function (event)
 {
-
-	// Cache core assets
+	// Cache core assets, waiting for every one to finish
 	event.waitUntil(caches.open('app').then(function (cache)
 	{
-		for (let asset of coreAssets)
+		return Promise.all(coreAssets.map(function (asset)
 		{
-			cache.add(new Request(asset));
-		}
-		return cache;
+			return cache.add(new Request(asset)).catch(function (error)
+			{
+				console.warn('Failed to cache', asset, error);
+			});
+		}));
 	}));
-
 });
 
 // Listen for request events
 self.addEventListener('fetch', function (event)
 {
-
 	// Get the request
 	let request = event.request;
 
 	// Bug fix
 	// https://stackoverflow.com/a/49719964
-	if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
+	if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin')
+	{
+		return;
+	}
+
+	let accept = request.headers.get('Accept') || '';
 
 	// HTML files
 	// Network-first
-	if (request.headers.get('Accept').includes('text/html'))
+	if (accept.includes('text/html'))
 	{
 		event.respondWith(
 			fetch(request).then(function (response)
@@ -72,21 +74,19 @@ self.addEventListener('fetch', function (event)
 
 			})
 		);
+		return;
 	}
 
 	// CSS & JavaScript
 	// Offline-first
-	if (request.headers.get('Accept').includes('text/css') || request.headers.get('Accept').includes('text/javascript'))
+	if (accept.includes('text/css') || accept.includes('text/javascript') || accept.includes('application/javascript'))
 	{
 		event.respondWith(
 			caches.match(request).then(function (response)
 			{
 				return response || fetch(request).then(function (response)
 				{
-
-					// Return the response
 					return response;
-
 				});
 			})
 		);
@@ -95,7 +95,7 @@ self.addEventListener('fetch', function (event)
 
 	// Images
 	// Offline-first
-	if (request.headers.get('Accept').includes('image'))
+	if (accept.includes('image'))
 	{
 		event.respondWith(
 			caches.match(request).then(function (response)
@@ -116,6 +116,6 @@ self.addEventListener('fetch', function (event)
 				});
 			})
 		);
+		return;
 	}
-
 });
