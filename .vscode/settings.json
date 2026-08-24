@@ -1,0 +1,8 @@
+{
+    "css.format.braceStyle": "expand",
+    "js/ts.format.placeOpenBraceOnNewLineForFunctions": true,
+    "js/ts.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "js/ts.format.insertSpaceBeforeFunctionParenthesis": true,
+    "js/ts.inlayHints.enumMemberValues.enabled": false,
+    "js/ts.inlayHints.functionLikeReturnTypes.enabled": false
+}
